@@ -1,0 +1,228 @@
+<!--
+==========================================================================
+LANGKAH 1 — Di <head>, HAPUS seluruh blok <style>...</style> lama,
+lalu GANTI dengan blok di bawah ini (dari <script src=tailwind> sampai </style> kedua).
+Link Google Fonts tetap dipertahankan.
+==========================================================================
+-->
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { pu:'var(--p)', mg:'var(--m)', tl:'var(--t)', bl:'var(--b)', ink:'var(--i)',
+              bg:'var(--bg)', lav:'var(--lav)', tx:'var(--tx)', mu:'var(--mu)', card:'var(--card)', ln:'var(--ln)' },
+    fontFamily: { display:['Plus Jakarta Sans','system-ui','sans-serif'], body:['Inter','system-ui','sans-serif'] }
+  } }
+}
+</script>
+
+<!-- Variabel warna + dark mode (tetap CSS biasa karena dipakai Tailwind lewat var()) -->
+<style>
+:root{--p:#7C13A4;--m:#EA00D9;--t:#2AAEB6;--b:#0B4784;--i:#0B0A4E;--bg:#fff;--lav:#F4EDF9;--tx:#1d1b2e;--mu:#5c5a6e;--card:#fff;--ln:#e3d7ec;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f0e24;--lav:#17153a;--tx:#ece9f5;--mu:#aaa7c2;--card:#1b1942;--ln:#2d2a5c}}
+:root[data-theme="dark"]{--bg:#0f0e24;--lav:#17153a;--tx:#ece9f5;--mu:#aaa7c2;--card:#1b1942;--ln:#2d2a5c}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+@keyframes f{from{opacity:0;transform:translateY(8px)}}
+@keyframes pu{0%{r:4;opacity:1}100%{r:16;opacity:0}}
+</style>
+
+<!-- Semua CSS lama dipindah ke sini, ditulis dengan @apply Tailwind -->
+<style type="text/tailwindcss">
+@layer base{
+  body{@apply m-0 bg-bg text-tx font-body text-base leading-[1.65]}
+  h1,h2,h3{@apply font-display leading-[1.2] mb-[.5em] mt-0 font-bold}
+  h1{@apply text-[2em]} h2{@apply text-[1.5em]} h3{@apply text-[1.17em]}
+  p{@apply my-4}
+  a:not([class]){@apply text-pu underline}
+}
+
+/* ---------- layout ---------- */
+.w{@apply mx-auto py-12 px-[clamp(20px,4vw,64px)]}
+.pg{@apply hidden}
+.pg.on{@apply block;animation:f .4s}
+.alt{@apply bg-lav}
+.g{@apply grid gap-[18px] grid-cols-[repeat(auto-fit,minmax(230px,1fr))]}
+.row{@apply flex flex-wrap justify-center gap-2.5}
+.pg-grid{@apply grid gap-3.5 grid-cols-[repeat(auto-fill,minmax(160px,1fr))]}
+.dot{background:radial-gradient(var(--p) 1.2px,transparent 1.4px) 0 0/16px 16px;opacity:.25;height:14px}
+
+/* ---------- hero ---------- */
+.hero{@apply relative overflow-hidden text-white;background:linear-gradient(135deg,var(--i),var(--b) 55%,var(--p))}
+.hero .w{@apply px-5 py-[90px]}
+.hero h1{@apply max-w-[700px] text-[clamp(2rem,5vw,3.4rem)]}
+.hero p{@apply max-w-[560px] text-[#e4defa]}
+.hero svg{@apply absolute -right-10 -bottom-[30px] w-[420px] opacity-[.28]}
+
+/* ---------- tombol, tag, note, pill ---------- */
+.btn{@apply inline-block cursor-pointer rounded-full border-2 border-tl text-[15px] font-bold no-underline transition mt-1.5 mr-2 px-[22px] py-3 hover:-translate-y-0.5}
+.b1{@apply bg-tl text-[#04252a]}
+.b2{@apply bg-transparent text-white}
+.tag{@apply inline-block text-[13px] font-bold uppercase tracking-[.12em] text-mg}
+.note{@apply mt-0 mb-6 rounded-lg border-l-4 border-pu bg-lav px-3.5 py-2.5 text-sm text-mu}
+.pill{@apply mt-1 inline-block rounded-full bg-lav px-2.5 py-0.5 text-xs text-pu}
+.ic{@apply text-[30px]}
+
+/* ---------- kartu ---------- */
+.c{@apply rounded-2xl border border-ln bg-card p-5 transition-all duration-[250ms] hover:-translate-y-[3px] hover:shadow-[0_8px_24px_#7c13a433]}
+a.c{@apply block no-underline text-inherit}
+.org{@apply text-center}
+.org .c{@apply m-1.5 inline-block min-w-[200px]}
+.line{@apply mx-auto h-6 w-0.5 bg-pu}
+.flow{@apply flex flex-wrap items-stretch gap-1.5}
+.flow .c{@apply flex-[1_1_150px] p-3.5 text-center}
+.ar{@apply self-center text-[22px] font-extrabold text-tl}
+
+/* ---------- filter produk ---------- */
+.bar{@apply mb-5 flex flex-wrap gap-2.5}
+.bar input,.bar select,.fm input,.fm select,.fm textarea{@apply rounded-xl border border-ln bg-card px-3.5 py-[11px] text-tx focus:outline focus:outline-2 focus:outline-tl}
+.bar input,.bar select{@apply flex-[1_1_180px]}
+.fm{@apply grid gap-2.5}
+.fm input,.fm select,.fm textarea{@apply w-full}
+.pc{@apply cursor-pointer overflow-hidden rounded-[14px] border border-ln bg-card transition-shadow duration-[250ms] hover:shadow-[0_8px_22px_#0b478433]}
+.pc .im{@apply aspect-square bg-lav}
+.pc svg,.pc img{@apply block h-full w-full object-cover transition-transform duration-[250ms]}
+.pc:hover svg,.pc:hover img{@apply scale-[1.14]}
+.pc div.t{@apply px-3 py-2.5 text-[13px]}
+.pc b{@apply block font-display text-sm}
+.pc small{@apply text-mu}
+
+/* ---------- modal ---------- */
+.mo{@apply fixed inset-0 z-50 hidden items-center justify-center bg-[#0b0a4ecc] p-4}
+.mo.on{@apply flex}
+.mb{@apply grid max-h-[90vh] w-full max-w-[640px] grid-cols-1 gap-5 overflow-auto rounded-[20px] bg-card p-[22px] min-[601px]:grid-cols-2}
+.x{@apply float-right cursor-pointer border-0 bg-transparent text-[22px] text-tx}
+
+/* ---------- video, peta, foto ---------- */
+.vid{@apply relative grid aspect-video place-items-center overflow-hidden rounded-2xl p-3 text-center text-white;background:linear-gradient(135deg,var(--i),var(--p))}
+.map{@apply grid aspect-[16/8] place-items-center rounded-2xl border border-ln p-3 text-center;background:repeating-linear-gradient(45deg,var(--lav),var(--lav) 12px,var(--card) 12px,var(--card) 24px)}
+.mapw{@apply mt-5 rounded-[20px] bg-ink p-4 text-center text-sm text-[#dcd7f5]}
+.mapw svg{@apply h-auto w-full}
+.pulse{animation:pu 1.8s infinite}
+.ph{@apply relative mb-2 grid aspect-[4/3] place-items-center overflow-hidden rounded-[14px] text-[44px] text-white;background:linear-gradient(135deg,var(--p),var(--b))}
+.mbi{@apply relative aspect-square overflow-hidden rounded-[14px] bg-lav}
+.im{@apply relative overflow-hidden}
+.aml{@apply block h-full w-full object-cover}
+.av{@apply block h-full w-full bg-black object-cover}
+.vid .aml,.vid .asset-fb,.vid .av,.ph .aml,.ph .asset-fb,.mbi .aml,.mbi .asset-fb,.im .aml,.im .asset-fb{@apply absolute inset-0 h-full w-full object-cover}
+.asset-fb{@apply grid h-full min-h-[80px] w-full place-content-center place-items-center gap-1 break-words border-2 border-dashed border-pu p-3 text-center font-display text-xs font-bold text-pu;background:repeating-linear-gradient(45deg,var(--lav),var(--lav) 10px,transparent 10px,var(--lav) 20px)}
+.asset-fb .p{@apply text-[13px] font-extrabold}
+.asset-fb small{@apply font-body font-medium text-mu}
+
+/* ---------- statistik, timeline, berita ---------- */
+.st{@apply grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-3.5 text-center}
+.st b{@apply block font-display text-[clamp(2rem,4vw,2.8rem)] font-extrabold text-pu}
+.st .c{@apply p-[18px] text-sm}
+.tl{@apply grid auto-cols-[minmax(240px,1fr)] grid-flow-col gap-3.5 overflow-x-auto px-0.5 pt-1.5 pb-3 max-[700px]:auto-cols-auto max-[700px]:grid-flow-row}
+.tl .c b{@apply block font-display text-[28px] font-extrabold text-pu}
+.tl .c small{@apply font-bold text-tl}
+.nw{@apply cursor-pointer}
+.nw small{@apply text-mu}
+.nw h3{@apply mt-1.5 mb-0 text-base}
+
+/* ---------- CSR ---------- */
+#csrg .c{@apply flex flex-col}
+#csrg .c .vid{@apply mb-3}
+#csrg .c h3{@apply line-clamp-2 min-h-[2.5em]}
+#csrg .c p{@apply mb-3 flex-[1_0_auto]}
+
+/* ---------- footer ---------- */
+footer{@apply bg-ink px-5 py-9 text-sm text-[#cfcaf0]}
+footer .w{@apply p-0}
+footer b{@apply text-white}
+footer a{@apply text-white}
+footer p{@apply my-[.4em]}
+</style>
+
+
+<!--
+==========================================================================
+LANGKAH 2 — Di <body>, HAPUS blok lama dari  <nav id="nav"> ... </nav>
+lalu GANTI dengan blok di bawah ini (header + script kecil).
+Script lain (JS produk, go(), dst.) TIDAK perlu diubah.
+==========================================================================
+-->
+<style type="text/tailwindcss">
+  .nl{@apply block whitespace-nowrap rounded-full px-3 py-2 text-sm text-[#d8d4f0] no-underline transition hover:bg-pu hover:text-white max-lg:rounded-lg}
+  .nl.on{@apply bg-pu text-white}
+  .sl{@apply my-0.5 block whitespace-nowrap rounded-lg px-3.5 py-2.5 text-sm text-tx no-underline hover:bg-lav hover:text-pu max-lg:text-[#d8d4f0] max-lg:hover:bg-pu max-lg:hover:text-white}
+  .sl.on{@apply bg-lav text-pu max-lg:bg-pu max-lg:text-white}
+</style>
+
+<header class="sticky top-[env(safe-area-inset-top,0px)] z-40 bg-ink shadow-lg">
+  <div class="relative flex items-center gap-1 px-5 py-2.5">
+    <a href="#beranda" class="mr-auto flex items-center gap-2.5 no-underline">
+      <img src="logo.png" alt="Artema Pharma Logo" class="h-[46px] w-auto">
+      <b class="whitespace-nowrap font-display text-[17px] font-extrabold text-white">ARTEMA <span class="text-tl">PHARMA</span></b>
+    </a>
+
+    <button id="navBtn" type="button" aria-label="Buka menu" aria-expanded="false"
+      class="rounded-lg border border-white/30 px-3 py-1.5 text-xl leading-none text-white lg:hidden">☰</button>
+
+    <!-- menu: kolom di HP (buka-tutup), baris di desktop -->
+    <nav id="menu"
+      class="absolute left-0 right-0 top-full hidden max-h-[75vh] flex-col gap-1 overflow-y-auto bg-ink p-3 shadow-xl
+             lg:static lg:flex lg:max-h-none lg:flex-row lg:items-center lg:gap-1 lg:overflow-visible lg:p-0 lg:shadow-none">
+
+      <a class="nl" href="#beranda">Beranda</a>
+
+      <div class="group relative">
+        <a class="nl" href="#tentang">Tentang Kami ▾</a>
+        <div class="hidden max-lg:block lg:absolute lg:left-0 lg:top-full lg:z-50 lg:min-w-[230px] lg:pt-2 lg:group-hover:block lg:group-focus-within:block">
+          <div class="rounded-xl border border-ln bg-card p-2 max-lg:ml-4 max-lg:border-0 max-lg:bg-transparent max-lg:p-0 lg:shadow-[0_8px_24px_rgba(11,10,78,.25)]">
+            <a class="sl" href="#tentang">Sejarah Kami</a>
+            <a class="sl" href="#tentang-filosofi">Filosofi Logo</a>
+            <a class="sl" href="#tentang-visi-misi">Visi, Misi &amp; Nilai</a>
+            <a class="sl" href="#organisasi">Struktur Organisasi</a>
+            <a class="sl" href="#tentang-legalitas">Legalitas Perusahaan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="group relative">
+        <a class="nl" href="#produk">Produk &amp; Jasa ▾</a>
+        <div class="hidden max-lg:block lg:absolute lg:left-0 lg:top-full lg:z-50 lg:min-w-[230px] lg:pt-2 lg:group-hover:block lg:group-focus-within:block">
+          <div class="rounded-xl border border-ln bg-card p-2 max-lg:ml-4 max-lg:border-0 max-lg:bg-transparent max-lg:p-0 lg:shadow-[0_8px_24px_rgba(11,10,78,.25)]">
+            <a class="sl" href="#produk">Produk</a>
+            <a class="sl" href="#produk-jasa">Jasa</a>
+          </div>
+        </div>
+      </div>
+
+      <a class="nl" href="#riset">Riset &amp; Produksi</a>
+      <a class="nl" href="#csr">ARTEMA Peduli</a>
+
+      <div class="group relative">
+        <a class="nl" href="#karir">Karir ▾</a>
+        <div class="hidden max-lg:block lg:absolute lg:left-0 lg:top-full lg:z-50 lg:min-w-[230px] lg:pt-2 lg:group-hover:block lg:group-focus-within:block">
+          <div class="rounded-xl border border-ln bg-card p-2 max-lg:ml-4 max-lg:border-0 max-lg:bg-transparent max-lg:p-0 lg:shadow-[0_8px_24px_rgba(11,10,78,.25)]">
+            <a class="sl" href="#karir">Peluang Karir</a>
+            <a class="sl" href="#karir-magang">Magang</a>
+            <a class="sl" href="#karir-pengembangan">Pengembangan Karyawan</a>
+            <a class="sl" href="#karir-lamaran">Kirim Lamaran</a>
+            <a class="sl" href="#karir-kata-mereka">Apa Kata Mereka</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="group relative">
+        <a class="nl" href="#kontak">Hubungi Kami ▾</a>
+        <!-- dropdown terakhir rata kanan supaya tidak keluar layar -->
+        <div class="hidden max-lg:block lg:absolute lg:right-0 lg:top-full lg:z-50 lg:min-w-[230px] lg:pt-2 lg:group-hover:block lg:group-focus-within:block">
+          <div class="rounded-xl border border-ln bg-card p-2 max-lg:ml-4 max-lg:border-0 max-lg:bg-transparent max-lg:p-0 lg:shadow-[0_8px_24px_rgba(11,10,78,.25)]">
+            <a class="sl" href="#kontak">Kontak</a>
+            <a class="sl" href="#faq">FAQ</a>
+            <a class="sl" href="#medis">Informasi Medis &amp; MESO</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+/* buka-tutup menu HP; tutup otomatis saat pindah halaman */
+(()=>{const b=document.getElementById('navBtn'),m=document.getElementById('menu');
+const set=o=>{m.classList.toggle('hidden',!o);m.classList.toggle('flex',o);b.setAttribute('aria-expanded',o);b.textContent=o?'✕':'☰'};
+b.addEventListener('click',()=>set(m.classList.contains('hidden')));
+addEventListener('hashchange',()=>set(false))})();
+</script>

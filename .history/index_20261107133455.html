@@ -1,0 +1,2441 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PT. ARTEMA PHARMA — Nature-Inspired Pharmaceutical Innovation</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+<!-- Lucide Icons (third-party icon library) -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        pu:   '#7C13A4',
+        mg:   '#EA00D9',
+        tl:   '#2AAEB6',
+        bl:   '#0B4784',
+        ink:  '#0B0A4E',
+        bg:   '#FFFFFF',
+        lav:  '#F4EDF9',
+        tx:   '#1d1b2e',
+        mu:   '#5c5a6e',
+        ln:   '#e3d7ec'
+      },
+      fontFamily: {
+        display: ['"Plus Jakarta Sans"','system-ui','sans-serif'],
+        body:    ['Inter','system-ui','sans-serif']
+      },
+      boxShadow: {
+        soft: '0 4px 20px -8px rgba(11,10,78,.12)',
+        lift: '0 12px 32px -12px rgba(124,19,164,.20)'
+      },
+      borderRadius: { xl2: '1.25rem' }
+    }
+  }
+}
+</script>
+
+<style>
+:root {
+  --p: #7C13A4; --m: #EA00D9; --t: #2AAEB6; --b: #0B4784; --i: #0B0A4E;
+  --bg: #fff; --lav: #F4EDF9; --tx: #1d1b2e; --mu: #5c5a6e;
+  --card: #fff; --ln: #e3d7ec;
+  color-scheme: light;
+  padding-top: env(safe-area-inset-top, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f0e24; --lav: #17153a; --tx: #ece9f5; --mu: #aaa7c2;
+    --card: #1b1942; --ln: #2d2a5c;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f0e24; --lav: #17153a; --tx: #ece9f5; --mu: #aaa7c2;
+  --card: #1b1942; --ln: #2d2a5c;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body {
+  margin: 0; background: var(--bg); color: var(--tx);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+h1,h2,h3,h4 {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-weight: 700; line-height: 1.2; margin: 0 0 .6em; color: var(--tx);
+}
+p { margin: 0 0 1em; }
+a { color: var(--p); }
+
+/* Lucide icon defaults */
+[data-lucide] {
+  width: 20px; height: 20px; stroke-width: 2;
+  vertical-align: middle; display: inline-block;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .75rem 1.4rem; border-radius: 999px;
+  font-weight: 600; font-size: 15px; text-decoration: none;
+  transition: all 240ms ease; cursor: pointer; border: 2px solid transparent;
+  white-space: nowrap;
+}
+.btn-primary { background: var(--t); color: #04252a; border-color: var(--t); }
+.btn-primary:hover { background: #228f96; border-color: #228f96; transform: translateY(-2px); box-shadow: var(--shadow-lift, 0 12px 32px -12px rgba(42,174,182,.35)); }
+.btn-secondary { background: transparent; color: #fff; border-color: rgba(255,255,255,.6); }
+.btn-secondary:hover { background: rgba(255,255,255,.1); border-color: #fff; }
+.btn-outline { background: transparent; color: var(--p); border-color: var(--p); }
+.btn-outline:hover { background: var(--p); color: #fff; }
+.btn-ghost { background: transparent; color: var(--tx); border-color: var(--ln); }
+.btn-ghost:hover { background: var(--lav); border-color: var(--p); color: var(--p); }
+
+/* Nav */
+.nl {
+  display: inline-flex; align-items: center; gap: .35rem;
+  padding: .55rem .85rem; border-radius: 999px;
+  font-size: 14px; font-weight: 500; color: #d8d4f0; text-decoration: none;
+  transition: all 200ms ease; white-space: nowrap;
+}
+.nl:hover, .nl.on { background: var(--p); color: #fff; }
+.sl {
+  display: block; padding: .55rem .9rem; border-radius: .6rem;
+  font-size: 14px; color: var(--tx); text-decoration: none;
+  transition: all 200ms ease;
+}
+.sl:hover, .sl.on { background: var(--lav); color: var(--p); }
+@media (max-width: 1023px) {
+  .sl { color: #d8d4f0; }
+  .sl:hover, .sl.on { background: var(--p); color: #fff; }
+}
+
+/* Layout */
+.container {
+  max-width: 1200px; margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+}
+.section-tag {
+  display: inline-flex; align-items: center; gap: .4rem;
+  color: var(--m); font-weight: 700; font-size: 12px;
+  letter-spacing: .12em; text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+.section-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+  margin: 0 0 1rem; color: var(--tx);
+}
+.section-lead {
+  color: var(--mu); max-width: 720px; margin: 0 0 2rem;
+  font-size: 1rem; line-height: 1.7;
+}
+
+/* Cards */
+.card {
+  background: var(--card); border: 1px solid var(--ln);
+  border-radius: 1.25rem; padding: 1.5rem;
+  transition: all 260ms ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px -16px rgba(124,19,164,.24);
+  border-color: rgba(124,19,164,.25);
+}
+.card-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 12px;
+  background: var(--lav); color: var(--p);
+  margin-bottom: 1rem;
+}
+.card-icon [data-lucide] { width: 24px; height: 24px; }
+
+/* Grid */
+.grid-auto {
+  display: grid; gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.grid-auto-sm {
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+
+/* Page transition */
+.page { display: none; animation: fadeIn 280ms ease; }
+.page.active { display: block; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0; transform: translateY(16px);
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+/* Hero */
+.hero {
+  position: relative; overflow: hidden; color: #fff;
+  background: linear-gradient(135deg, var(--i) 0%, var(--b) 55%, var(--p) 100%);
+}
+.hero-inner {
+  position: relative; z-index: 10;
+  max-width: 1200px; margin: 0 auto;
+  padding: 6rem 1.5rem;
+}
+.hero h1 {
+  color: #fff; font-size: clamp(2rem, 5vw, 3.4rem);
+  max-width: 720px; margin-bottom: 1rem;
+}
+.hero p {
+  color: #e4defa; max-width: 600px;
+  font-size: 1.05rem; line-height: 1.7;
+}
+.hero .decor {
+  position: absolute; right: -60px; bottom: -40px;
+  width: 480px; height: 480px; opacity: .18;
+  pointer-events: none;
+}
+
+/* Page header */
+.page-header {
+  position: relative; overflow: hidden; color: #fff;
+  background: linear-gradient(135deg, var(--i) 0%, var(--b) 60%, var(--p) 100%);
+}
+.page-header-inner {
+  position: relative; z-index: 10;
+  max-width: 1200px; margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+}
+.page-header h1 { color: #fff; font-size: clamp(1.75rem, 4vw, 2.4rem); margin: .25rem 0 .5rem; }
+.page-header p { color: #e4defa; max-width: 640px; margin: 0; }
+
+/* Note */
+.note {
+  display: flex; gap: .75rem; align-items: flex-start;
+  background: var(--lav); border-left: 4px solid var(--p);
+  border-radius: .75rem; padding: .9rem 1.1rem;
+  font-size: 14px; color: var(--mu); line-height: 1.55;
+  margin: 1rem 0 1.5rem;
+}
+.note [data-lucide] { color: var(--p); flex-shrink: 0; margin-top: 2px; }
+
+/* Pills */
+.pill {
+  display: inline-flex; align-items: center; gap: .3rem;
+  background: var(--lav); color: var(--p);
+  padding: .25rem .65rem; border-radius: 999px;
+  font-size: 12px; font-weight: 600;
+}
+
+/* Asset fallback */
+.asset-fb {
+  display: grid; place-content: center; place-items: center;
+  gap: .4rem; padding: 1rem; text-align: center;
+  border: 2px dashed var(--p); border-radius: .9rem;
+  background: repeating-linear-gradient(45deg, var(--lav), var(--lav) 10px, transparent 10px, transparent 20px);
+  color: var(--p); font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px; font-weight: 700; word-break: break-word;
+  min-height: 100px;
+}
+.asset-fb .path {
+  background: rgba(11,10,78,.85); color: var(--t);
+  padding: .2rem .55rem; border-radius: .35rem;
+  font-family: monospace; font-size: 11px;
+  word-break: break-all; max-width: 100%;
+}
+
+/* Media frame */
+.media {
+  position: relative; overflow: hidden;
+  border-radius: 1rem; background: var(--lav);
+  aspect-ratio: 16 / 10;
+}
+.media img, .media video {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 300ms ease;
+}
+.media:hover img { transform: scale(1.04); }
+
+/* Product card */
+.product-card { cursor: pointer; overflow: hidden; padding: 0; }
+.product-card .media { border-radius: 0; aspect-ratio: 1; }
+.product-card .body { padding: .85rem 1rem 1rem; }
+.product-card .name {
+  display: block; font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700; font-size: 14px; color: var(--tx);
+  margin-bottom: .15rem;
+}
+.product-card .cat { font-size: 12px; color: var(--mu); display: block; margin-bottom: .5rem; }
+
+/* Filter bar */
+.filter-bar {
+  display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: 1.25rem;
+}
+.filter-bar input,
+.filter-bar select,
+.form input,
+.form select,
+.form textarea {
+  padding: .7rem .9rem; border: 1px solid var(--ln);
+  border-radius: .7rem; background: var(--card); color: var(--tx);
+  font-family: inherit; font-size: 14px;
+  transition: border-color 200ms, box-shadow 200ms;
+  outline: none;
+}
+.filter-bar input:focus, .filter-bar select:focus,
+.form input:focus, .form select:focus, .form textarea:focus {
+  border-color: var(--t);
+  box-shadow: 0 0 0 3px rgba(42,174,182,.18);
+}
+.filter-bar input { flex: 1 1 220px; }
+.filter-bar select { flex: 1 1 160px; }
+.form { display: grid; gap: .8rem; }
+.form label { font-size: 13px; font-weight: 600; margin-bottom: .2rem; display: block; }
+.form input, .form select, .form textarea { width: 100%; }
+
+/* Timeline */
+.timeline {
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(240px, 1fr);
+  gap: 1rem; overflow-x: auto; padding: .5rem .25rem 1rem;
+  scroll-snap-type: x mandatory;
+}
+.timeline .card { scroll-snap-align: start; }
+.timeline .year {
+  font-family: "Plus Jakarta Sans", sans-serif; font-weight: 800;
+  font-size: 1.75rem; color: var(--p); display: block;
+}
+@media (max-width: 700px) {
+  .timeline { grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: 1fr; }
+}
+
+/* Stats */
+.stats {
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  text-align: center;
+}
+.stats .num {
+  display: block; font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800; font-size: clamp(2rem, 4vw, 2.6rem);
+  color: var(--p); line-height: 1;
+}
+.stats .lbl { font-size: 13px; color: var(--mu); margin-top: .4rem; display: block; }
+
+/* Modal */
+.modal {
+  position: fixed; inset: 0; z-index: 80;
+  display: none; align-items: center; justify-content: center;
+  background: rgba(11,10,78,.75); backdrop-filter: blur(4px);
+  padding: 1rem;
+}
+.modal.open { display: flex; animation: fadeIn 200ms ease; }
+.modal-box {
+  background: var(--card); border-radius: 1.25rem;
+  max-width: 720px; width: 100%; max-height: 90vh;
+  overflow-y: auto; padding: 1.75rem;
+  display: grid; grid-template-columns: 1fr; gap: 1.25rem;
+}
+@media (min-width: 640px) {
+  .modal-box.split { grid-template-columns: 1fr 1fr; }
+}
+.modal-close {
+  position: absolute; top: 1rem; right: 1rem;
+  background: var(--lav); border: none; cursor: pointer;
+  width: 36px; height: 36px; border-radius: 50%;
+  display: grid; place-items: center; color: var(--tx);
+  transition: background 200ms;
+}
+.modal-close:hover { background: var(--ln); }
+
+/* Video/map frames */
+.video-frame {
+  position: relative; aspect-ratio: 16/9;
+  background: linear-gradient(135deg, var(--i), var(--p));
+  border-radius: 1rem; overflow: hidden;
+}
+.video-frame video { width: 100%; height: 100%; object-fit: cover; }
+.map-frame {
+  aspect-ratio: 16/8; border-radius: 1rem;
+  border: 1px solid var(--ln);
+  background: repeating-linear-gradient(45deg, var(--lav), var(--lav) 12px, var(--card) 12px, var(--card) 24px);
+  display: grid; place-items: center; padding: 1rem; text-align: center;
+}
+
+/* Footer */
+footer {
+  background: var(--i); color: #cfcaf0;
+  padding: 3rem 1.5rem 2rem;
+  font-size: 14px;
+}
+footer a { color: #fff; text-decoration: none; }
+footer a:hover { color: var(--tl); }
+footer h4 { color: #fff; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin: 1rem 0 .5rem; }
+footer h4:first-child { margin-top: 0; }
+footer p { margin: .3rem 0; }
+
+/* Flow / process */
+.flow {
+  display: flex; flex-wrap: wrap; gap: .6rem; align-items: stretch;
+}
+.flow .step {
+  flex: 1 1 140px; padding: .9rem; text-align: center;
+  border-radius: .9rem; border: 1px solid var(--ln);
+  background: var(--card);
+}
+.flow .arrow { align-self: center; color: var(--t); }
+
+/* FAQ */
+details.faq {
+  border: 1px solid var(--ln); border-radius: .9rem;
+  padding: .9rem 1.1rem; margin-bottom: .6rem;
+  background: var(--card);
+}
+details.faq summary {
+  cursor: pointer; font-weight: 600; list-style: none;
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+}
+details.faq summary::-webkit-details-marker { display: none; }
+details.faq summary::after {
+  content: '+'; font-size: 1.4rem; color: var(--p); line-height: 1;
+  transition: transform 200ms;
+}
+details.faq[open] summary::after { content: '−'; }
+details.faq p { margin: .75rem 0 0; color: var(--mu); font-size: 14px; }
+
+/* Misc */
+.dot-line {
+  height: 1px; background: var(--ln); margin: 2.5rem 0;
+}
+.hidden { display: none !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+/* Nav mobile */
+#mobileMenu { display: none; }
+#mobileMenu.open { display: flex; flex-direction: column; }
+@media (min-width: 1024px) {
+  #mobileMenu { display: flex !important; flex-direction: row; align-items: center; }
+  #mobileMenu.open { display: flex !important; }
+}
+
+/* Dropdown */
+.dropdown-panel {
+  display: none; position: absolute; top: 100%; left: 0;
+  padding-top: .5rem; z-index: 50; min-width: 230px;
+}
+.group:hover .dropdown-panel,
+.group:focus-within .dropdown-panel { display: block; }
+.dropdown-panel .inner {
+  background: var(--card); border: 1px solid var(--ln);
+  border-radius: .9rem; padding: .5rem;
+  box-shadow: 0 16px 40px -16px rgba(11,10,78,.25);
+}
+@media (max-width: 1023px) {
+  .dropdown-panel { position: static; padding-top: 0; display: block; }
+  .dropdown-panel .inner { background: transparent; border: none; box-shadow: none; padding: 0 0 0 1rem; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============ ASSET SYSTEM ============ -->
+<script>
+const medIMG = (src, alt = '') =>
+  `<img src="${src}" alt="${alt}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">`;
+
+function assetFallback(el) {
+  const src = el.getAttribute('src') || '';
+  const wrap = document.createElement('div');
+  wrap.className = 'asset-fb';
+  wrap.innerHTML = `<span>Gambar belum tersedia</span><span class="path">${src}</span>`;
+  el.replaceWith(wrap);
+}
+document.addEventListener('error', e => {
+  const t = e.target;
+  if (t && (t.tagName === 'IMG' || t.tagName === 'VIDEO') &&
+      (t.getAttribute('src') || '').startsWith('asset/')) {
+    assetFallback(t);
+  }
+}, true);
+</script>
+
+<!-- ============ HEADER / NAV ============ -->
+<header style="position:sticky;top:0;z-index:40;background:var(--i);box-shadow:0 4px 20px -8px rgba(0,0,0,.3)">
+  <div style="max-width:1200px;margin:0 auto;padding:.65rem 1.25rem;display:flex;align-items:center;gap:.75rem;position:relative">
+    <a href="#beranda" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;margin-right:auto">
+      <div style="width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--p),var(--m));display:grid;place-items:center;color:#fff">
+        <i data-lucide="leaf"></i>
+      </div>
+      <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:#fff;font-size:16px;white-space:nowrap">
+        ARTEMA <span style="color:var(--tl)">PHARMA</span>
+      </span>
+    </a>
+
+    <button id="navBtn" aria-label="Buka menu" aria-expanded="false"
+      style="background:transparent;border:1px solid rgba(255,255,255,.25);border-radius:.5rem;padding:.4rem .6rem;color:#fff;cursor:pointer;display:flex;align-items:center"
+      class="lg:hidden">
+      <i data-lucide="menu"></i>
+    </button>
+
+    <nav id="mobileMenu" style="position:absolute;left:0;right:0;top:100%;background:var(--i);padding:1rem;gap:.35rem;max-height:75vh;overflow-y:auto;box-shadow:0 12px 32px -8px rgba(0,0,0,.4)"
+         class="hidden">
+      <a class="nl" href="#beranda" data-nav>Beranda</a>
+      <div class="group" style="position:relative">
+        <a class="nl" href="#tentang" data-nav>Tentang Kami <i data-lucide="chevron-down" style="width:14px;height:14px"></i></a>
+        <div class="dropdown-panel"><div class="inner">
+          <a class="sl" href="#tentang" data-nav>Sejarah Kami</a>
+          <a class="sl" href="#filosofi-logo" data-nav>Filosofi Logo</a>
+          <a class="sl" href="#visi-misi" data-nav>Visi, Misi & Nilai</a>
+          <a class="sl" href="#organisasi" data-nav>Struktur Organisasi</a>
+          <a class="sl" href="#legalitas" data-nav>Legalitas Perusahaan</a>
+        </div></div>
+      </div>
+      <div class="group" style="position:relative">
+        <a class="nl" href="#produk" data-nav>Produk & Jasa <i data-lucide="chevron-down" style="width:14px;height:14px"></i></a>
+        <div class="dropdown-panel"><div class="inner">
+          <a class="sl" href="#produk" data-nav>Produk</a>
+          <a class="sl" href="#produk-jasa" data-nav>Jasa</a>
+        </div></div>
+      </div>
+      <a class="nl" href="#riset" data-nav>Riset & Produksi</a>
+      <a class="nl" href="#csr" data-nav>ARTEMA Peduli</a>
+      <div class="group" style="position:relative">
+        <a class="nl" href="#karir" data-nav>Karir <i data-lucide="chevron-down" style="width:14px;height:14px"></i></a>
+        <div class="dropdown-panel"><div class="inner">
+          <a class="sl" href="#karir" data-nav>Peluang Karir</a>
+          <a class="sl" href="#magang" data-nav>Magang</a>
+          <a class="sl" href="#pengembangan-karyawan" data-nav>Pengembangan Karyawan</a>
+          <a class="sl" href="#kirim-lamaran" data-nav>Kirim Lamaran</a>
+          <a class="sl" href="#apa-kata-mereka" data-nav>Apa Kata Mereka</a>
+        </div></div>
+      </div>
+      <div class="group" style="position:relative">
+        <a class="nl" href="#kontak" data-nav>Hubungi Kami <i data-lucide="chevron-down" style="width:14px;height:14px"></i></a>
+        <div class="dropdown-panel"><div class="inner">
+          <a class="sl" href="#kontak" data-nav>Kontak</a>
+          <a class="sl" href="#faq" data-nav>FAQ</a>
+          <a class="sl" href="#medis" data-nav>Informasi Medis & MESO</a>
+        </div></div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ==================================================== -->
+<!-- ==================== BERANDA ======================= -->
+<!-- ==================================================== -->
+<section class="page" id="beranda">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Nature-Inspired Pharmaceutical Innovation</span>
+      <h1>Merawat Kehidupan,<br>Menumbuhkan Inovasi.</h1>
+      <p>ARTEMA menghubungkan riset bahan alam, pengembangan produk, pengendalian mutu, edukasi kesehatan, dan pemberdayaan masyarakat — berlandaskan ilmu dan kearifan Nusantara.</p>
+      <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.5rem">
+        <a class="btn btn-primary" href="#produk">Jelajahi Produk <i data-lucide="arrow-right" style="width:16px;height:16px"></i></a>
+        <a class="btn btn-secondary" href="#tentang">Tentang Kami</a>
+      </div>
+    </div>
+    <svg class="decor" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="1.5">
+      <path d="M100 190V60M100 150c-30-5-45-25-50-45 28 2 45 15 50 45zM100 120c30-5 45-25 50-45-28 2-45 15-50 45zM100 90c-20-4-30-18-34-32 20 2 31 11 34 32zM100 70c20-4 30-18 34-32-20 2-31 11-34 32z"/>
+    </svg>
+  </div>
+
+  <!-- Intro -->
+  <div class="container">
+    <div class="note">
+      <i data-lucide="info"></i>
+      <div>Website ini adalah <b>proyek konseptual tugas kuliah</b>. Perusahaan, produk, kegiatan, dan angka bersifat contoh/fiktif.</div>
+    </div>
+
+    <div class="grid-auto reveal" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:center;gap:2rem">
+      <div>
+        <span class="section-tag"><i data-lucide="building-2" style="width:14px;height:14px"></i> Profil Perusahaan</span>
+        <h2 class="section-title">Dedikasi untuk kesehatan, dari alam Nusantara</h2>
+        <p style="color:var(--mu);line-height:1.75">PT. ARTEMA PHARMA hadir dengan komitmen menghadirkan solusi kesehatan yang aman, bermutu, dan terpercaya. Berlandaskan riset bahan alam dan kearifan flora Sumatera Selatan, setiap langkah kami didorong dedikasi untuk meningkatkan kualitas hidup masyarakat.</p>
+        <a class="btn btn-outline" href="#tentang" style="margin-top:.5rem">Baca Profil Lengkap</a>
+      </div>
+      <div class="video-frame">
+        <video src="asset/video/company-profile.mp4" controls preload="metadata"></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div style="background:var(--lav)">
+    <div class="container">
+      <span class="section-tag"><i data-lucide="bar-chart-3" style="width:14px;height:14px"></i> Sekilas Tentang Kami</span>
+      <h2 class="section-title">ARTEMA dalam Angka</h2>
+      <div class="stats reveal" id="statsGrid"></div>
+      <div class="note" style="margin-top:1.5rem">
+        <i data-lucide="alert-circle"></i>
+        <div>Angka bersifat ilustratif untuk proyek tugas kuliah, bukan klaim resmi.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Values -->
+  <div class="container">
+    <span class="section-tag"><i data-lucide="sparkles" style="width:14px;height:14px"></i> ARTEMA Values</span>
+    <h2 class="section-title">Enam Nilai yang Kami Pegang</h2>
+    <div class="grid-auto reveal" id="valuesGrid"></div>
+  </div>
+
+  <!-- Pilar -->
+  <div style="background:var(--lav)">
+    <div class="container">
+      <span class="section-tag"><i data-lucide="layers" style="width:14px;height:14px"></i> Pilar Kami</span>
+      <h2 class="section-title">Tiga Pilar Utama</h2>
+      <div class="grid-auto reveal">
+        <div class="card">
+          <div class="card-icon"><i data-lucide="microscope"></i></div>
+          <h3>Riset Bahan Alam</h3>
+          <p style="color:var(--mu)">Penelusuran potensi flora Sumatera Selatan secara sistematis dan berbasis bukti.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i data-lucide="factory"></i></div>
+          <h3>Manufaktur Bermutu</h3>
+          <p style="color:var(--mu)">Alur produksi dan QA/QC mengacu prinsip CPOB yang berlaku.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i data-lucide="heart-handshake"></i></div>
+          <h3>Peduli Masyarakat</h3>
+          <p style="color:var(--mu)">Program edukasi, lingkungan, dan pemberdayaan yang berkelanjutan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filosofi teaser -->
+  <div class="container">
+    <div class="grid-auto reveal" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:center;gap:2rem">
+      <div>
+        <span class="section-tag"><i data-lucide="feather" style="width:14px;height:14px"></i> Filosofi</span>
+        <h2 class="section-title">Air kehidupan, daun sirih, dan bunga telang</h2>
+        <p style="color:var(--mu);line-height:1.75">ARTEMA berasal dari <i>Artemisia annua</i>, sumber artemisinin. Aliran <b>Amerta</b> (air kehidupan) dan titik halus bergaya batik buketan melambangkan semangat angkatan 2023 serta ketangguhan menghadapi tantangan lingkungan.</p>
+        <a class="btn btn-outline" href="#filosofi-logo" style="margin-top:.5rem">Baca Filosofi Lengkap</a>
+      </div>
+      <div class="card" style="background:linear-gradient(145deg,var(--lav),var(--card));text-align:center;padding:2.5rem">
+        <div style="width:80px;height:80px;border-radius:20px;background:linear-gradient(135deg,var(--p),var(--m));display:grid;place-items:center;color:#fff;margin:0 auto 1rem">
+          <i data-lucide="sprout" style="width:40px;height:40px"></i>
+        </div>
+        <span class="pill">Official Emblem</span>
+        <p style="font-size:13px;color:var(--mu);margin:.6rem 0 0">Terinspirasi dari <i>Artemisia annua</i>, Tirta Amerta, dan flora Sumatera Selatan</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured products -->
+  <div style="background:var(--lav)">
+    <div class="container">
+      <span class="section-tag"><i data-lucide="star" style="width:14px;height:14px"></i> Produk Unggulan</span>
+      <h2 class="section-title">Pilihan Produk ARTEMA</h2>
+      <div class="grid-auto-sm reveal" id="featuredProducts"></div>
+      <div style="text-align:center;margin-top:2rem">
+        <a class="btn btn-primary" href="#produk">Lihat Semua Produk <i data-lucide="arrow-right" style="width:16px;height:16px"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kegiatan -->
+  <div class="container">
+    <span class="section-tag"><i data-lucide="activity" style="width:14px;height:14px"></i> Kegiatan</span>
+    <h2 class="section-title">Sehari di ARTEMA</h2>
+    <div class="grid-auto reveal" id="activitiesGrid"></div>
+  </div>
+
+  <!-- Berita -->
+  <div style="background:var(--lav)">
+    <div class="container">
+      <span class="section-tag"><i data-lucide="newspaper" style="width:14px;height:14px"></i> Berita</span>
+      <h2 class="section-title">Wawasan dari ARTEMA</h2>
+      <p class="section-lead">Artikel edukatif konseptual. Klik untuk membaca.</p>
+      <div class="grid-auto reveal" id="newsGrid"></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ==================================================== -->
+<!-- ==================== TENTANG ======================= -->
+<!-- ==================================================== -->
+<section class="page" id="tentang">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Profil Perusahaan</span>
+      <h1>Tentang PT. ARTEMA PHARMA</h1>
+      <p>Dedikasi untuk kesehatan Nusantara berlandaskan riset bahan alam, mutu berkelanjutan, dan kearifan lokal.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <span class="section-tag"><i data-lucide="book-open" style="width:14px;height:14px"></i> Sejarah Kami</span>
+    <h2 class="section-title">Berawal dari rasa ingin tahu, tumbuh menjadi komitmen</h2>
+    <div id="storyContent" style="max-width:780px;color:var(--mu);line-height:1.75"></div>
+
+    <div class="dot-line"></div>
+
+    <h2 class="section-title">Perjalanan 2018–2026</h2>
+    <div class="timeline reveal" id="timelineContainer"></div>
+
+    <div class="dot-line"></div>
+
+    <h2 class="section-title">Visi & Misi</h2>
+    <div class="card reveal" style="background:linear-gradient(135deg,rgba(124,19,164,.05),rgba(42,174,182,.06));border:2px solid var(--p);margin-bottom:1.5rem">
+      <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem">
+        <div class="card-icon" style="margin:0"><i data-lucide="target"></i></div>
+        <div>
+          <span class="pill" style="background:var(--p);color:#fff">Visi Utama</span>
+          <h3 style="margin:.25rem 0 0">Visi PT. ARTEMA PHARMA</h3>
+        </div>
+      </div>
+      <blockquote style="margin:0;padding:1rem 1.25rem;border-left:4px solid var(--m);background:var(--card);border-radius:0 .75rem .75rem 0;font-size:1.05rem;font-weight:500;line-height:1.65">
+        "Menjadi perusahaan farmasi yang inovatif, tepercaya, dan bertanggung jawab melalui pengembangan produk kesehatan berbasis ilmu pengetahuan serta eksplorasi potensi alam Indonesia."
+      </blockquote>
+    </div>
+
+    <h3 style="margin-top:1.5rem">6 Misi Strategis</h3>
+    <div class="grid-auto reveal" id="misiGrid"></div>
+
+    <div class="dot-line"></div>
+
+    <h2 class="section-title">ARTEMA Values</h2>
+    <div class="grid-auto reveal" id="valuesFull"></div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ================= FILOSOFI LOGO ==================== -->
+<!-- ==================================================== -->
+<section class="page" id="filosofi-logo">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Identitas Visual</span>
+      <h1>Filosofi Logo PT. ARTEMA PHARMA</h1>
+      <p>Harmoni sains modern, keteladanan saintis dunia, dan kearifan flora Nusantara.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="grid-auto reveal" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:start;gap:2.5rem">
+      <div class="card" style="background:linear-gradient(145deg,var(--card),var(--lav));text-align:center;padding:2rem">
+        <div style="max-width:320px;margin:0 auto 1rem;background:var(--lav);border-radius:1rem;padding:2rem;display:grid;place-items:center;min-height:240px">
+          <i data-lucide="leaf" style="width:100px;height:100px;color:var(--p);opacity:.7"></i>
+        </div>
+        <span class="pill">Official Emblem · PT. ARTEMA PHARMA</span>
+        <p style="font-size:13px;color:var(--mu);margin:.75rem 0 0">Terinspirasi dari <i>Artemisia annua</i>, Tirta Amerta Bumandhala, dan kearifan flora Sumatera Selatan</p>
+      </div>
+
+      <div>
+        <span class="section-tag"><i data-lucide="palette" style="width:14px;height:14px"></i> Konsep Dasar</span>
+        <h2 class="section-title">Lebih dari sekadar lambang, ini janji dedikasi</h2>
+        <p style="color:var(--mu);line-height:1.75">Logo <b>PT. ARTEMA PHARMA</b> dirancang sebagai wujud komitmen etis, keilmuan, dan kultural. Di dalamnya terpadu semangat penemuan obat berbasis bahan alam terstandar, penghormatan kepada dedikasi saintis, serta harapan bahwa setiap formulasi mampu menjadi mata air kesembuhan bagi masyarakat luas.</p>
+
+        <div class="note" style="margin-top:1.25rem">
+          <i data-lucide="lightbulb"></i>
+          <div><b>Inti Makna:</b> Inisial huruf <b>"A"</b>, keteladanan <b>Prof. Tu Youyou</b>, lambang universal farmasi <b>Mangkuk Hygieia</b>, sepasang <b>daun sirih</b>, pancaran <b>air Amerta</b>, dan <b>batik buketan bunga telang</b>.</div>
+        </div>
+
+        <h3 style="margin-top:1.5rem">Palet Warna Resmi</h3>
+        <div class="grid-auto-sm" style="margin-top:1rem">
+          <div style="text-align:center;padding:.75rem;border-radius:.75rem;background:var(--card);border:1px solid var(--ln)">
+            <div style="height:32px;border-radius:.5rem;background:#7C13A4;margin-bottom:.5rem"></div>
+            <b style="font-size:12px;display:block">Amethyst Purple</b>
+            <small style="color:var(--mu);font-size:11px">#7C13A4 · Mutu & Etika</small>
+          </div>
+          <div style="text-align:center;padding:.75rem;border-radius:.75rem;background:var(--card);border:1px solid var(--ln)">
+            <div style="height:32px;border-radius:.5rem;background:#EA00D9;margin-bottom:.5rem"></div>
+            <b style="font-size:12px;display:block">Vibrant Magenta</b>
+            <small style="color:var(--mu);font-size:11px">#EA00D9 · Inovasi</small>
+          </div>
+          <div style="text-align:center;padding:.75rem;border-radius:.75rem;background:var(--card);border:1px solid var(--ln)">
+            <div style="height:32px;border-radius:.5rem;background:#2AAEB6;margin-bottom:.5rem"></div>
+            <b style="font-size:12px;display:block">Medicinal Teal</b>
+            <small style="color:var(--mu);font-size:11px">#2AAEB6 · Air Amerta</small>
+          </div>
+          <div style="text-align:center;padding:.75rem;border-radius:.75rem;background:var(--card);border:1px solid var(--ln)">
+            <div style="height:32px;border-radius:.5rem;background:#3E6B27;margin-bottom:.5rem"></div>
+            <b style="font-size:12px;display:block">Botanical Green</b>
+            <small style="color:var(--mu);font-size:11px">#3E6B27 · Bahan Alam</small>
+          </div>
+          <div style="text-align:center;padding:.75rem;border-radius:.75rem;background:var(--card);border:1px solid var(--ln)">
+            <div style="height:32px;border-radius:.5rem;background:#0B0A4E;margin-bottom:.5rem"></div>
+            <b style="font-size:12px;display:block">Midnight Navy</b>
+            <small style="color:var(--mu);font-size:11px">#0B0A4E · Integritas</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dot-line"></div>
+
+    <span class="section-tag"><i data-lucide="scan" style="width:14px;height:14px"></i> Dekomposisi Visual</span>
+    <h2 class="section-title">6 Unsur Fundamental dalam Logo</h2>
+    <div class="grid-auto reveal" id="logoElements"></div>
+
+    <div style="background:var(--lav);border-radius:1.25rem;padding:2rem;margin-top:2.5rem">
+      <span class="section-tag">Koneksi Filosofis</span>
+      <h2 class="section-title">Refleksi Logo pada Nilai ARTEMA</h2>
+      <div class="grid-auto" id="logoValuesGrid" style="margin-top:1.25rem"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ================= VISI MISI ======================== -->
+<!-- ==================================================== -->
+<section class="page" id="visi-misi">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Arah Strategis</span>
+      <h1>Visi, Misi & Nilai Inti</h1>
+      <p>Komitmen jangka panjang PT. ARTEMA PHARMA dalam inovasi kesehatan berbasis sains dan kearifan alam.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card" style="background:linear-gradient(135deg,rgba(11,10,78,.04),rgba(124,19,164,.06));border:2px solid var(--p);margin-bottom:2rem">
+      <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem">
+        <div class="card-icon" style="margin:0"><i data-lucide="target"></i></div>
+        <span class="pill" style="background:var(--p);color:#fff">Visi</span>
+      </div>
+      <blockquote style="margin:0;padding:1rem 1.25rem;border-left:4px solid var(--m);background:var(--card);border-radius:0 .75rem .75rem 0;font-size:1.05rem;font-weight:500">
+        "Menjadi perusahaan farmasi yang inovatif, tepercaya, dan bertanggung jawab melalui pengembangan produk kesehatan berbasis ilmu pengetahuan serta eksplorasi potensi alam Indonesia."
+      </blockquote>
+    </div>
+
+    <h2 class="section-title">6 Misi Strategis</h2>
+    <div class="grid-auto reveal" id="misiGridFull"></div>
+
+    <div class="dot-line"></div>
+
+    <h2 class="section-title">ARTEMA VALUES</h2>
+    <div class="grid-auto reveal" id="valuesVisiMisi"></div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ================= ORGANISASI ======================= -->
+<!-- ==================================================== -->
+<section class="page" id="organisasi">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Tata Kelola & Tim</span>
+      <h1>Struktur Organisasi</h1>
+      <p>Sinergi dewan pimpinan dan departemen fungsional dalam menjamin mutu dan keamanan produk.</p>
+    </div>
+  </div>
+  <div class="container">
+    <p class="section-lead">Tim riset mengeksplorasi gagasan, tim produksi menerjemahkannya menjadi proses terencana, sementara QA dan QC memastikan persyaratan mutu hadir di setiap tahap. <em>Jabatan bersifat simulasi.</em></p>
+
+    <h3>Dewan Pimpinan</h3>
+    <div class="grid-auto reveal" id="boardGrid"></div>
+
+    <div class="dot-line"></div>
+
+    <h3>Departemen Fungsional</h3>
+    <div class="grid-auto reveal" id="departmentsGrid"></div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ================= LEGALITAS ======================== -->
+<!-- ==================================================== -->
+<section class="page" id="legalitas">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Kepatuhan Regulasi</span>
+      <h1>Legalitas & Sertifikasi</h1>
+      <p>Landasan kepatuhan hukum, izin operasional, dan target sertifikasi mutu CPOB.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="note">
+      <i data-lucide="info"></i>
+      <div><b>Catatan Akademik:</b> Seluruh nomor registrasi, perizinan, dan sertifikat yang tercantum merupakan bagian dari proyek konseptual akademik Farmasi Universitas Sriwijaya Angkatan 2023.</div>
+    </div>
+
+    <span class="section-tag"><i data-lucide="file-text" style="width:14px;height:14px"></i> Status Kelembagaan</span>
+    <h2 class="section-title">Data Badan Hukum Perseroan</h2>
+    <div class="grid-auto reveal" id="legalGrid"></div>
+
+    <div class="dot-line"></div>
+
+    <h2 class="section-title">Standar & Sertifikasi Mutu</h2>
+    <div class="grid-auto reveal" id="certsGrid"></div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ================= PRODUK =========================== -->
+<!-- ==================================================== -->
+<section class="page" id="produk">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Portofolio & Layanan</span>
+      <h1>Katalog Produk</h1>
+      <p>60 sediaan farmasi inovatif dari bahan alam terstandar.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="note">
+      <i data-lucide="info"></i>
+      <div>Nama produk & kemasan adalah ilustrasi konseptual, bukan produk terdaftar BPOM.</div>
+    </div>
+
+    <div class="grid-auto-sm" id="categoryCards" style="margin-bottom:1.5rem"></div>
+
+    <div class="filter-bar">
+      <input id="searchInput" type="text" placeholder="Cari nama produk...">
+      <select id="filterCat"></select>
+      <select id="filterForm"></select>
+      <select id="filterGol"></select>
+    </div>
+
+    <p id="countText" style="color:var(--mu);font-size:14px;margin-bottom:1rem"></p>
+    <div class="grid-auto-sm reveal" id="productsGrid"></div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ================= PRODUK JASA ====================== -->
+<!-- ==================================================== -->
+<section class="page" id="produk-jasa">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Layanan Profesional</span>
+      <h1>Jasa ARTEMA PHARMA</h1>
+      <p>Riset formulasi, contract manufacturing, pengujian mutu, dan edukasi kesehatan.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-auto reveal">
+      <div class="card">
+        <div class="card-icon"><i data-lucide="flask-conical"></i></div>
+        <h3>Riset & Formulasi</h3>
+        <p style="color:var(--mu);font-size:14px">Kami membantu mitra mengembangkan formulasi produk dari konsep hingga prototipe: screening bahan aktif, optimasi formula, uji stabilitas awal, dan dokumentasi.</p>
+        <ul style="color:var(--mu);font-size:14px;padding-left:1.25rem;margin:0">
+          <li>Riset ekstraksi dan karakterisasi</li>
+          <li>Formulasi tablet, kapsul, sirup, topikal</li>
+          <li>Uji stabilitas dan kompatibilitas</li>
+        </ul>
+        <a class="btn btn-outline" href="#kontak" style="margin-top:1rem">Konsultasi</a>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i data-lucide="package"></i></div>
+        <h3>Contract Manufacturing</h3>
+        <p style="color:var(--mu);font-size:14px">Produksi batch sesuai kebutuhan mitra dengan standar CPOB, dari penimbangan hingga pengemasan primer dan sekunder.</p>
+        <ul style="color:var(--mu);font-size:14px;padding-left:1.25rem;margin:0">
+          <li>Batch kecil hingga komersial</li>
+          <li>Proses tervalidasi</li>
+          <li>Dokumentasi batch record lengkap</li>
+        </ul>
+        <a class="btn btn-outline" href="#kontak" style="margin-top:1rem">Diskusi</a>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i data-lucide="bar-chart-2"></i></div>
+        <h3>Pengujian Mutu (QC)</h3>
+        <p style="color:var(--mu);font-size:14px">Laboratorium QC kami melayani pengujian bahan baku, produk setengah jadi, dan produk jadi dengan laporan resmi.</p>
+        <ul style="color:var(--mu);font-size:14px;padding-left:1.25rem;margin:0">
+          <li>Uji identitas, kadar, kemurnian</li>
+          <li>Uji fisikokimia sediaan</li>
+          <li>Uji mikrobiologi & CoA</li>
+        </ul>
+        <a class="btn btn-outline" href="#kontak" style="margin-top:1rem">Ajukan</a>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i data-lucide="graduation-cap"></i></div>
+        <h3>Edukasi & Pelatihan</h3>
+        <p style="color:var(--mu);font-size:14px">Program edukasi tentang DAGUSIBU, penyimpanan obat, pengenalan profesi farmasi, dan topik kesehatan lain — disesuaikan kebutuhan.</p>
+        <ul style="color:var(--mu);font-size:14px;padding-left:1.25rem;margin:0">
+          <li>Penyuluhan DAGUSIBU</li>
+          <li>Workshop tenaga kesehatan</li>
+          <li>Edukasi sekolah</li>
+        </ul>
+        <a class="btn btn-outline" href="#kontak" style="margin-top:1rem">Ajukan</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ================= RISET PRODUKSI =================== -->
+<!-- ==================================================== -->
+<section class="page" id="riset">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Inovasi Manufaktur</span>
+      <h1>Riset & Produksi</h1>
+      <p>Dari rasa ingin tahu menuju proses terukur mengacu standar CPOB.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="note">
+      <i data-lucide="info"></i>
+      <div>Diagram edukatif konseptual untuk sediaan padat nonsteril. Alur aktual berbeda menurut jenis sediaan dan fasilitas.</div>
+    </div>
+
+    <div class="flow reveal" id="flowContainer"></div>
+
+    <div class="dot-line"></div>
+
+    <h2 class="section-title">Standar Mutu yang Kami Tuju</h2>
+    <div class="grid-auto reveal" id="certTargets"></div>
+
+    <div class="dot-line"></div>
+
+    <h2 class="section-title">Video</h2>
+    <div class="grid-auto">
+      <div>
+        <div class="video-frame"><video src="asset/video/company-profile.mp4" controls preload="metadata"></video></div>
+        <p style="font-size:13px;color:var(--mu);text-align:center;margin-top:.5rem">Company Profile</p>
+      </div>
+      <div>
+        <div class="video-frame"><video src="asset/video/iklan-produk-1.mp4" controls preload="metadata"></video></div>
+        <p style="font-size:13px;color:var(--mu);text-align:center;margin-top:.5rem">Iklan Produk 1</p>
+      </div>
+      <div>
+        <div class="video-frame"><video src="asset/video/iklan-produk-2.mp4" controls preload="metadata"></video></div>
+        <p style="font-size:13px;color:var(--mu);text-align:center;margin-top:.5rem">Iklan Produk 2</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ================= CSR ============================== -->
+<!-- ==================================================== -->
+<section class="page" id="csr">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Tanggung Jawab Sosial</span>
+      <h1>ARTEMA Peduli</h1>
+      <p>Bertumbuh bersama masyarakat melalui literasi obat, kepedulian lingkungan, dan pemberdayaan sains.</p>
+    </div>
+  </div>
+  <div class="container">
+    <p class="section-lead">Perubahan berarti tidak selalu dimulai dari langkah besar. Empat pilar kami berfokus pada literasi obat, kesehatan komunitas, kelestarian lingkungan, dan generasi muda.</p>
+    <div class="grid-auto reveal" id="csrPrograms"></div>
+
+    <div class="dot-line"></div>
+
+    <h2 class="section-title">Contoh Rancangan Kegiatan</h2>
+    <div class="note">
+      <i data-lucide="info"></i>
+      <div>Contoh rancangan kegiatan (simulasi). Jangan menuliskan jumlah peserta, testimoni, atau dampak sebagai hasil nyata.</div>
+    </div>
+    <div class="grid-auto reveal" id="csrActivities"></div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ================= KEGIATAN DETAIL ================== -->
+<!-- ==================================================== -->
+<section class="page" id="kegiatan">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Dokumentasi</span>
+      <h1>Dokumentasi Kegiatan</h1>
+      <p>Program pengabdian masyarakat, edukasi kesehatan, dan inisiatif lingkungan.</p>
+    </div>
+  </div>
+  <div class="container" id="kegiatanBody"></div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ================= LOKASI =========================== -->
+<!-- ==================================================== -->
+<section class="page" id="lokasi">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Fasilitas</span>
+      <h1>Lokasi & Fasilitas</h1>
+      <p>Gedung utama, laboratorium R&D, dan denah operasional.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-auto">
+      <div class="map-frame">
+        <div>
+          <i data-lucide="map-pin" style="width:32px;height:32px;color:var(--p);margin-bottom:.5rem"></i>
+          <p style="margin:.5rem 0">Peta interaktif (sematkan Google Maps)</p>
+          <a class="btn btn-outline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Universitas+Sriwijaya+Indralaya">Buka Petunjuk Arah</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Kontak</h3>
+        <p style="font-size:14px;color:var(--mu)">
+          <i data-lucide="map-pin" style="width:14px;height:14px"></i> Indralaya, Sumatera Selatan<br>
+          <i data-lucide="mail" style="width:14px;height:14px"></i> contact@artemapharma.example<br>
+          <i data-lucide="clock" style="width:14px;height:14px"></i> Senin–Jumat, 08.00–16.00
+        </p>
+        <div class="map-frame" style="margin-top:1rem">
+          ${medIMG('asset/lokasi/denah-fasilitas.jpeg', 'Denah fasilitas')}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ================= KARIR ============================ -->
+<!-- ==================================================== -->
+<section class="page" id="karir">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Peluang & Kolaborasi</span>
+      <h1>Karir & Program Magang</h1>
+      <p>Tempat rasa ingin tahu bertemu kesempatan untuk bertumbuh.</p>
+    </div>
+  </div>
+  <div class="container">
+    <p class="section-lead">Inovasi tumbuh ketika orang diberi ruang untuk belajar, bertanya, dan bekerja bersama. ARTEMA merancang lingkungan kerja yang mengutamakan kolaborasi, integritas, dan pengembangan kompetensi.</p>
+
+    <div class="grid-auto reveal" id="karirBidang"></div>
+
+    <div class="dot-line"></div>
+
+    <h2 class="section-title">Alur Seleksi</h2>
+    <div class="flow reveal" id="alurSeleksi"></div>
+
+    <div class="dot-line"></div>
+
+    <h2 class="section-title">Magang ARTEMA: belajar di lab sungguhan</h2>
+    <div class="grid-auto reveal" id="magangInfo"></div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ================= MAGANG =========================== -->
+<!-- ==================================================== -->
+<section class="page" id="magang">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Praktik Industri</span>
+      <h1>Program Magang ARTEMA</h1>
+      <p>Belajar langsung di laboratorium riset, instrumen QC, dan fasilitas manufaktur CPOB.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-auto reveal" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:center;gap:2rem">
+      <div>
+        <span class="section-tag">Hands-on Learning</span>
+        <h2 class="section-title">Bukan Sekadar Mengamati</h2>
+        <p style="color:var(--mu);line-height:1.75">Program Magang di <b>PT. ARTEMA PHARMA</b> dirancang untuk menjembatani teori akademik dengan dinamika industri farmasi nyata. Peserta dibimbing langsung oleh Apoteker dan Peneliti Senior dalam menjalankan uji laboratorium, penanganan instrumen analitik, hingga pemahaman regulasi CPOB.</p>
+        <a class="btn btn-primary" href="#kirim-lamaran" style="margin-top:.5rem">Daftar Magang <i data-lucide="arrow-right" style="width:16px;height:16px"></i></a>
+      </div>
+      <div class="card" style="background:var(--lav)">
+        <h3>Sekilas Program</h3>
+        <ul style="font-size:14px;line-height:1.8;color:var(--tx);padding-left:1.25rem;margin:0">
+          <li><b>Durasi:</b> 1–3 bulan (disesuaikan sks PKPA)</li>
+          <li><b>Sertifikasi:</b> Sertifikat Resmi Magang Industri</li>
+          <li><b>Fasilitas:</b> Uang saku, jas lab, APD, akses perpustakaan</li>
+          <li><b>Jalur Khusus:</b> Prioritas wawancara setelah lulus</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dot-line"></div>
+
+    <h2 class="section-title">4 Peminatan Divisi</h2>
+    <div class="grid-auto reveal">
+      <div class="card">
+        <div class="card-icon"><i data-lucide="flask-conical"></i></div>
+        <span class="pill">R&D</span>
+        <h3 style="margin-top:.5rem">Formulasi & Fitokimia</h3>
+        <p style="color:var(--mu);font-size:14px">Ekstraksi bahan alam, optimasi eksipien, uji stabilitas, pengembangan sediaan fitofarmaka.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i data-lucide="microscope"></i></div>
+        <span class="pill">QC Lab</span>
+        <h3 style="margin-top:.5rem">Quality Control</h3>
+        <p style="color:var(--mu);font-size:14px">Analisis HPLC, Spektrofotometri, Dissolution Tester, uji mikrobiologi, verifikasi simplisia.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i data-lucide="factory"></i></div>
+        <span class="pill">Manufacturing</span>
+        <h3 style="margin-top:.5rem">Produksi & QA CPOB</h3>
+        <p style="color:var(--mu);font-size:14px">Granulasi, pencetakan tablet, IPC, review batch record, validasi pembersihan mesin.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i data-lucide="file-text"></i></div>
+        <span class="pill">Regulatory</span>
+        <h3 style="margin-top:.5rem">Regulasi & PV</h3>
+        <p style="color:var(--mu);font-size:14px">Dokumen registrasi BPOM, evaluasi kemasan, pelaporan efek samping (MESO).</p>
+      </div>
+    </div>
+
+    <div style="background:var(--lav);border-radius:1.25rem;padding:2rem;margin-top:2rem">
+      <h2 class="section-title" style="margin-bottom:1rem">Persyaratan & Alur</h2>
+      <div class="grid-auto">
+        <div class="card">
+          <h3 style="margin-top:0">Kriteria Persyaratan</h3>
+          <ul style="font-size:14px;line-height:1.8;color:var(--tx);padding-left:1.25rem;margin:0">
+            <li>Mahasiswa aktif S1/D3 Farmasi, Profesi Apoteker, Kimia, Biologi, atau Teknik Kimia</li>
+            <li>Minimal semester 6 (S1)</li>
+            <li>IPK minimal 3,00</li>
+            <li>Surat Pengantar, CV, Transkrip Nilai</li>
+            <li>Komitmen disiplin & etika profesi</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Periode Pendaftaran</h3>
+          <p style="font-size:14px;color:var(--mu)"><b>Batch 1:</b> Mei–Juni (pelaksanaan Juli–September)</p>
+          <p style="font-size:14px;color:var(--mu)"><b>Batch 2:</b> November–Desember (pelaksanaan Januari–Maret)</p>
+          <p style="font-size:13px;color:var(--p);font-weight:600;margin-top:1rem"><i>*Untuk PKPA mitra, jadwal diselaraskan kalender akademik kampus.</i></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ============= PENGEMBANGAN KARYAWAN =============== -->
+<!-- ==================================================== -->
+<section class="page" id="pengembangan-karyawan">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">People & Organization</span>
+      <h1>Pengembangan Karyawan</h1>
+      <p>Investasi berkelanjutan pada kompetensi manusia.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-auto reveal" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:center;gap:2rem">
+      <div>
+        <span class="section-tag">Filosofi SDM</span>
+        <h2 class="section-title">Insan Mutu: Fondasi Terkuat Setiap Inovasi</h2>
+        <p style="color:var(--mu);line-height:1.75">Di PT. ARTEMA PHARMA, kami percaya kualitas obat pada akhirnya ditentukan oleh dedikasi, integritas, dan ketelitian orang-orang di baliknya. Kami merancang program pengembangan karir yang sistematis, adil, dan berorientasi jangka panjang.</p>
+      </div>
+      <div class="card" style="background:linear-gradient(135deg,rgba(11,10,78,.05),rgba(124,19,164,.08));border:2px solid var(--p)">
+        <b style="color:var(--p);font-size:1.1rem">Komitmen Kesejahteraan & Pertumbuhan</b>
+        <p style="font-size:14px;color:var(--tx);margin:.5rem 0 0;line-height:1.7">Setiap insan di ARTEMA didukung untuk memperdalam keahlian teknis maupun kepemimpinan melalui <b>ARTEMA Growth Academy</b>.</p>
+      </div>
+    </div>
+
+    <div class="dot-line"></div>
+
+    <h2 class="section-title">4 Pilar Growth Academy</h2>
+    <div class="grid-auto reveal">
+      <div class="card">
+        <div class="card-icon"><i data-lucide="book-open"></i></div>
+        <h3>CPOB & GLP Masterclass</h3>
+        <p style="font-size:14px;color:var(--mu)">Pelatihan sertifikasi berkelanjutan: regulasi CPOB, GLP, kalibrasi instrumen, manajemen deviasi.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i data-lucide="lightbulb"></i></div>
+        <h3>Apoteker Leadership</h3>
+        <p style="font-size:14px;color:var(--mu)">Kemampuan manajerial, etika pengambilan keputusan kritis, negosiasi teknis bagi apoteker penanggung jawab.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i data-lucide="repeat"></i></div>
+        <h3>Cross-Functional Rotations</h3>
+        <p style="font-size:14px;color:var(--mu)">Rotasi lintas departemen (R&D, QC, QA, PPIC, Regulatory) untuk pemahaman menyeluruh.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i data-lucide="graduation-cap"></i></div>
+        <h3>Beasiswa Studi Lanjut</h3>
+        <p style="font-size:14px;color:var(--mu)">Dukungan dana pendidikan pascasarjana dan sertifikasi profesi nasional/internasional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ============= KIRIM LAMARAN ======================== -->
+<!-- ==================================================== -->
+<section class="page" id="kirim-lamaran">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Rekrutmen</span>
+      <h1>Kirim Lamaran</h1>
+      <p>Mulai langkah karir Anda bersama PT. ARTEMA PHARMA.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-auto" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem">
+
+      <div class="card">
+        <h2 style="font-size:1.25rem;margin-top:0">Formulir Pendaftaran</h2>
+        <div class="form" style="margin-top:1rem">
+          <div>
+            <label>Nama Lengkap & Gelar</label>
+            <input id="lNama" placeholder="apt. Nama Lengkap, S.Farm.">
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
+            <div>
+              <label>Email</label>
+              <input id="lEmail" type="email" placeholder="nama@email.com">
+            </div>
+            <div>
+              <label>WhatsApp</label>
+              <input id="lHp" placeholder="08xxxxxxxxxx">
+            </div>
+          </div>
+          <div>
+            <label>Institusi & Jurusan</label>
+            <input id="lKampus" placeholder="Farmasi Universitas Sriwijaya">
+          </div>
+          <div>
+            <label>Jalur Pendaftaran</label>
+            <select id="lJalur">
+              <option>Program Magang Mahasiswa (1-3 Bulan)</option>
+              <option>Praktik Kerja Profesi Apoteker (PKPA)</option>
+              <option>Fresh Graduate Development Program</option>
+              <option>Tenaga Teknis Kefarmasian (TTK)</option>
+              <option>Apoteker Penanggung Jawab</option>
+              <option>Professional / Experienced Staff</option>
+            </select>
+          </div>
+          <div>
+            <label>Divisi Tujuan</label>
+            <select id="lDivisi">
+              <option>R&D & Formulasi Fitokimia</option>
+              <option>Quality Control (QC Lab)</option>
+              <option>Quality Assurance (QA)</option>
+              <option>Produksi & Manufaktur CPOB</option>
+              <option>Regulatory Affairs</option>
+              <option>PPIC & Supply Chain</option>
+              <option>Marketing & Medical Communication</option>
+              <option>Human Capital, GA & IT</option>
+            </select>
+          </div>
+          <div>
+            <label>Tautan CV / Portofolio</label>
+            <input id="lDrive" placeholder="https://drive.google.com/...">
+            <small style="color:var(--mu);font-size:11px">Pastikan izin akses "Siapa saja yang memiliki link".</small>
+          </div>
+          <div>
+            <label>Motivasi Singkat</label>
+            <textarea id="lPesan" rows="3" placeholder="Ceritakan motivasi Anda..."></textarea>
+          </div>
+          <button class="btn btn-primary" onclick="sendLamaran()" style="width:100%;justify-content:center">
+            <i data-lucide="send" style="width:16px;height:16px"></i> Kirim Lamaran
+          </button>
+          <p id="lStatus" style="font-size:13px;font-weight:600;margin:.5rem 0 0"></p>
+        </div>
+      </div>
+
+      <div>
+        <div class="card" style="margin-bottom:1.25rem">
+          <h3 style="margin-top:0">Tahapan Seleksi</h3>
+          <div class="flow" style="flex-direction:column;gap:.75rem;margin-top:1rem">
+            <div style="display:flex;gap:.75rem;align-items:flex-start">
+              <span style="display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--p);color:#fff;font-weight:700;font-size:13px;flex-shrink:0">1</span>
+              <div><b>Registrasi Berkas</b><br><small style="color:var(--mu)">Pengisian formulir & upload CV</small></div>
+            </div>
+            <div style="display:flex;gap:.75rem;align-items:flex-start">
+              <span style="display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--p);color:#fff;font-weight:700;font-size:13px;flex-shrink:0">2</span>
+              <div><b>Screening Kualifikasi</b><br><small style="color:var(--mu)">Penilaian latar belakang</small></div>
+            </div>
+            <div style="display:flex;gap:.75rem;align-items:flex-start">
+              <span style="display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--p);color:#fff;font-weight:700;font-size:13px;flex-shrink:0">3</span>
+              <div><b>Wawancara Teknis</b><br><small style="color:var(--mu)">Diskusi dengan Kepala Lab</small></div>
+            </div>
+            <div style="display:flex;gap:.75rem;align-items:flex-start">
+              <span style="display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--p);color:#fff;font-weight:700;font-size:13px;flex-shrink:0">4</span>
+              <div><b>Medical Check Up</b><br><small style="color:var(--mu)">Pemeriksaan kesehatan</small></div>
+            </div>
+            <div style="display:flex;gap:.75rem;align-items:flex-start">
+              <span style="display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#3E6B27;color:#fff;font-weight:700;font-size:13px;flex-shrink:0">5</span>
+              <div><b>Offering & Onboarding</b><br><small style="color:var(--mu)">Penawaran resmi</small></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="background:var(--lav)">
+          <h3 style="margin-top:0">Kontak HR</h3>
+          <p style="font-size:14px;color:var(--tx);margin:.5rem 0">
+            <i data-lucide="mail" style="width:14px;height:14px"></i> <a href="mailto:recruitment@artemapharma.example">recruitment@artemapharma.example</a><br>
+            <i data-lucide="phone" style="width:14px;height:14px"></i> (0711) 000-000 Ext. 204<br>
+            <i data-lucide="clock" style="width:14px;height:14px"></i> Senin–Jumat, 08.00–16.00 WIB
+          </p>
+          <div class="note" style="margin-bottom:0;background:var(--card)">
+            <i data-lucide="shield-check"></i>
+            <div>PT. ARTEMA PHARMA tidak memungut biaya dalam seluruh proses rekrutmen.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ============= APA KATA MEREKA ===================== -->
+<!-- ==================================================== -->
+<section class="page" id="apa-kata-mereka">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Testimoni</span>
+      <h1>Apa Kata Mereka</h1>
+      <p>Refleksi jujur dari apoteker, peneliti, teknisi, dan alumni magang.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="stats" style="margin-bottom:2.5rem">
+      <div class="card"><span class="num" style="color:var(--p)">96%</span><span class="lbl">Kepuasan Magang</span></div>
+      <div class="card"><span class="num" style="color:var(--t)">100%</span><span class="lbl">Budaya CPOB</span></div>
+      <div class="card"><span class="num" style="color:#3E6B27">88%</span><span class="lbl">Alumni Diterima Kerja</span></div>
+      <div class="card"><span class="num" style="color:var(--m)">12</span><span class="lbl">Departemen</span></div>
+    </div>
+
+    <div class="grid-auto reveal" id="testimonialsGrid"></div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ================= KONTAK =========================== -->
+<!-- ==================================================== -->
+<section class="page" id="kontak">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Komunikasi</span>
+      <h1>Hubungi Kami</h1>
+      <p>Informasi produk, kemitraan distribusi, kolaborasi riset, dan pertanyaan umum.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-auto" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+      <div class="card">
+        <h3>Kirim Pesan</h3>
+        <div class="form" style="margin-top:1rem">
+          <input id="fn" placeholder="Nama lengkap">
+          <input id="fe" type="email" placeholder="Email">
+          <select id="ft">
+            <option>Informasi produk</option>
+            <option>Kerja sama distribusi</option>
+            <option>Kolaborasi riset dan akademik</option>
+            <option>Program sosial dan lingkungan</option>
+            <option>Karier dan magang</option>
+            <option>Informasi keamanan obat</option>
+            <option>Pertanyaan umum</option>
+          </select>
+          <textarea id="fm" rows="4" placeholder="Tulis pesan Anda..."></textarea>
+          <button class="btn btn-primary" onclick="sendF()" style="justify-content:center">
+            <i data-lucide="send" style="width:16px;height:16px"></i> Kirim Pesan
+          </button>
+          <p id="fs" style="color:var(--p);font-size:13px;font-weight:600;margin:0"></p>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Kontak Langsung</h3>
+        <p style="font-size:14px;color:var(--mu);line-height:1.9">
+          <i data-lucide="phone" style="width:14px;height:14px"></i> (0711) 000-000<br>
+          <i data-lucide="mail" style="width:14px;height:14px"></i> contact@artemapharma.example<br>
+          <i data-lucide="map-pin" style="width:14px;height:14px"></i> Indralaya, Sumatera Selatan<br>
+          <i data-lucide="clock" style="width:14px;height:14px"></i> Senin–Jumat, 08.00–16.00
+        </p>
+        <a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/6281200000000" style="margin-top:.5rem">
+          <i data-lucide="message-circle" style="width:16px;height:16px"></i> WhatsApp Bisnis
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ================= FAQ ============================== -->
+<!-- ==================================================== -->
+<section class="page" id="faq">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Pusat Informasi</span>
+      <h1>FAQ</h1>
+      <p>Pertanyaan yang sering diajukan.</p>
+    </div>
+  </div>
+  <div class="container" style="max-width:900px" id="faqContainer"></div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ================= MEDIS / MESO ===================== -->
+<!-- ==================================================== -->
+<section class="page" id="medis">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Farmakovigilans</span>
+      <h1>Informasi Medis & MESO</h1>
+      <p>Layanan pemantauan efek samping obat dan informasi ilmiah.</p>
+    </div>
+  </div>
+  <div class="container">
+    <h2 class="section-title">Obat aman, kami ikut menjaganya</h2>
+    <div class="grid-auto reveal" id="mesoInfo"></div>
+
+    <div class="dot-line"></div>
+
+    <h2 class="section-title">Lapor Efek Samping</h2>
+    <div class="note">
+      <i data-lucide="alert-triangle"></i>
+      <div>Dalam keadaan darurat (sesak napas, bengkak wajah, pingsan), segera ke fasilitas kesehatan terdekat.</div>
+    </div>
+    <div class="card" style="max-width:640px">
+      <div class="form">
+        <input id="mn" placeholder="Nama pelapor">
+        <select id="ms">
+          <option>Pasien / konsumen</option>
+          <option>Dokter</option>
+          <option>Apoteker</option>
+          <option>Tenaga kesehatan lain</option>
+        </select>
+        <select id="mp"></select>
+        <input id="mbatch" placeholder="Nomor batch (di kemasan)">
+        <textarea id="md" rows="4" placeholder="Ceritakan efek yang dialami dan kapan muncul..."></textarea>
+        <button class="btn btn-primary" onclick="sendM()" style="justify-content:center">
+          <i data-lucide="send" style="width:16px;height:16px"></i> Kirim Laporan
+        </button>
+        <p id="mf" style="color:var(--p);font-size:13px;font-weight:600;margin:0"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ================= CEK KEASLIAN ===================== -->
+<!-- ==================================================== -->
+<section class="page" id="asli">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Jaminan Kualitas</span>
+      <h1>Cek Keaslian Produk</h1>
+      <p>Verifikasi nomor batch dan kode kemasan.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="note">
+      <i data-lucide="info"></i>
+      <div>Fitur demo. Kode contoh: ART-2601-001, ART-2601-002, ART-2601-003.</div>
+    </div>
+    <div class="card" style="max-width:520px">
+      <div class="form">
+        <input id="ck" placeholder="Masukkan kode batch">
+        <button class="btn btn-primary" onclick="chk()" style="justify-content:center">
+          <i data-lucide="search" style="width:16px;height:16px"></i> Periksa
+        </button>
+        <p id="cr" style="font-weight:600;margin:0"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ================= PRIVASI ========================== -->
+<!-- ==================================================== -->
+<section class="page" id="privasi">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Ketentuan</span>
+      <h1>Kebijakan Privasi</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="note">
+      <i data-lucide="info"></i>
+      <div>Templat untuk tugas kuliah, bukan dokumen hukum.</div>
+    </div>
+    <div class="grid-auto reveal" id="privacyGrid"></div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ================= SITEMAP ========================== -->
+<!-- ==================================================== -->
+<section class="page" id="peta">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag" style="color:var(--tl) !important">Navigasi</span>
+      <h1>Peta Situs</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-auto reveal" id="sitemapGrid"></div>
+  </div>
+</section>
+
+<!-- ==================================================== -->
+<!-- ===================== FOOTER ======================= -->
+<!-- ==================================================== -->
+<footer>
+  <div style="max-width:1200px;margin:0 auto">
+    <div class="grid-auto" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem">
+      <div>
+        <h4>Alamat Email</h4>
+        <p>CS: <a href="mailto:customer@artemapharma.example">customer@artemapharma.example</a></p>
+        <p>Media: <a href="mailto:contact@artemapharma.example">contact@artemapharma.example</a></p>
+        <p>HR: <a href="mailto:recruitment@artemapharma.example">recruitment@artemapharma.example</a></p>
+        <h4>Telepon</h4>
+        <p>(0711) 000-000 · WA +62 812-0000-0000</p>
+        <h4>Media Sosial</h4>
+        <p id="socLinks"></p>
+        <h4>Alamat</h4>
+        <p>Indralaya, Sumatera Selatan</p>
+      </div>
+      <div>
+        <h4>Penafsiran</h4>
+        <p>Seluruh konten situs ini adalah sumber informasi pendukung dan gambaran umum, tidak menggantikan keahlian atau keputusan medis tenaga kesehatan berwenang.</p>
+        <p>Bila Anda memiliki keluhan kesehatan, segera konsultasikan dengan dokter atau apoteker kompeten.</p>
+        <p>Proyek konseptual tugas kuliah, Farmasi UNSRI Angkatan 2023.</p>
+      </div>
+    </div>
+    <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1)">
+      <a class="btn btn-primary" href="#kontak">Hubungi Kami</a>
+      <p style="margin-top:1rem;font-size:13px">
+        <a href="#faq">FAQ</a> · <a href="#medis">Informasi Medis & MESO</a> · <a href="#asli">Cek Keaslian</a> · <a href="#privasi">Privasi</a> · <a href="#peta">Peta Situs</a>
+      </p>
+      <p style="font-size:12px;color:#8c88b8;margin-top:1rem">Copyright © 2026 PT. ARTEMA PHARMA. Seluruh konten contoh, bukan klaim resmi.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================================================== -->
+<!-- ===================== MODAL ======================== -->
+<!-- ==================================================== -->
+<div class="modal" id="modal">
+  <div class="modal-box" id="modalBox" style="position:relative"></div>
+</div>
+
+<!-- ==================================================== -->
+<!-- ==================== JAVASCRIPT ==================== -->
+<!-- ==================================================== -->
+<script>
+// ============ DATA ============
+const CATS = ["Herbal & Fitofarmaka","Vitamin & Suplemen","Nyeri & Demam","Saluran Cerna","Pernapasan","Kulit & Topikal"];
+const FORMS = ["Kapsul","Tablet","Sirup","Salep/Krim","Tetes Mata","Sachet","Larutan Kumur","Balsem","Oral Drops","Hand Sanitizer","Shampo","Kosmetik","Infus","Intranasal Spray"];
+const GOL = ["Herbal Terstandar & Fitofarmaka","Obat Bebas & Bebas Terbatas","Obat Keras (Resep)","Suplemen & Perawatan"];
+
+const RAW = "ARTEVIA:0,SIRVANA:6,NETRABIRU:4,AMERTAVIA:0,CENTELIA:0,JAHENDRA:5,HEPARUNA:0,KURKUFLEX:1,NIRAGARD:2,ANDRAGO:0,CIRAVITA:1,SOLARIS D3:0,ZINCARA:1,ENERVIA B:1,OMEGAVELA:0,KIDORA:2,OSTEVA:1,FERROLA:1,TOKOVERA:0,IONARA:5,PARANOVA 500:1,PROFENIA 200:1,BUPRIKID:2,REDARA GEL:3,OLIGA:7,SUHURA:8,MEFENIA 500:1,MIGRELA:1,HANGARA BALM:7,BACORA:0,LAMBUNGIA:2,FLORABIO:5,REHIDRA:5,GALANGA:0,DIMENVIA:1,LANCARA:1,TENANGA DROPS:8,SILIMARA:0,GASLEGA:1,ADASARI:2,SIRILEGA:2,TUSFRIA:2,PILEXA:1,NASALEGA:13,EKSPEKTRA:2,TIRIZA:1,NAFASIA:0,FLUNOCTA:1,IODARA:3,LUKARA:3,GATARA:3,MIKORA:3,SURYAVEIL:11,TELANGLOW:11,KLARISA:3,AMERTA DEW:11,ZIPIRA:10,TANGARA CLEAN:9,GUAVINE:9,ASCORBIA:12";
+
+const PRODUCTS = RAW.split(",").map((s, i) => {
+  const [n, f] = s.split(":");
+  return { n, f: +f, c: Math.floor(i/10), i };
+});
+
+const IMG_FOLDERS = ["kapsul","tablet","sirup","salep krim","tetes mata","shacet","larutan kumur","balsem","oral drops","handsanitazer","shampo","kosmetik","infus","intranasal"];
+
+function productImg(p) {
+  const folder = IMG_FOLDERS[p.f] || "produk";
+  return medIMG(`asset/produk/${folder}/${p.n}.png`, p.n);
+}
+
+// ============ RENDER HELPERS ============
+function productCard(p) {
+  return `<div class="card product-card" onclick="openProduct(${p.i})">
+    <div class="media">${productImg(p)}</div>
+    <div class="body">
+      <span class="name">${p.n}</span>
+      <span class="cat">${CATS[p.c]}</span>
+      <span class="pill">${FORMS[p.f]}</span>
+    </div>
+  </div>`;
+}
+
+function icon(name, size=20) {
+  return `<i data-lucide="${name}" style="width:${size}px;height:${size}px"></i>`;
+}
+
+// ============ NAV ============
+document.getElementById('navBtn').addEventListener('click', function() {
+  const menu = document.getElementById('mobileMenu');
+  const open = menu.classList.toggle('open');
+  this.setAttribute('aria-expanded', open);
+  this.innerHTML = open ? '<i data-lucide="x"></i>' : '<i data-lucide="menu"></i>';
+  lucide.createIcons();
+});
+
+// ============ ROUTER ============
+function navigate() {
+  const hash = (location.hash || '#beranda').slice(1);
+  let id = hash;
+  if (!document.getElementById(id) || !document.getElementById(id).classList.contains('page')) {
+    id = 'beranda';
+  }
+  // Aliases
+  const aliases = {
+    'tentang-filosofi': 'filosofi-logo',
+    'tentang-visi-misi': 'visi-misi',
+    'tentang-legalitas': 'legalitas',
+    'karir-magang': 'magang',
+    'karir-pengembangan': 'pengembangan-karyawan',
+    'karir-lamaran': 'kirim-lamaran',
+    'karir-kata-mereka': 'apa-kata-mereka'
+  };
+  if (aliases[hash]) id = aliases[hash];
+
+  // Kegiatan detail
+  if (hash.startsWith('kegiatan-')) {
+    id = 'kegiatan';
+    const slug = hash.replace('kegiatan-', '');
+    const item = CSR_ACTIVITIES.find(c => c.slug === slug);
+    if (item) renderKegiatanDetail(item);
+    else id = 'csr';
+  }
+
+  document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', p.id === id));
+  document.querySelectorAll('[data-nav]').forEach(a => {
+    const href = a.getAttribute('href');
+    a.classList.toggle('on', href === '#' + (id === 'kegiatan' ? 'csr' : id));
+  });
+
+  // Close mobile menu
+  const menu = document.getElementById('mobileMenu');
+  if (menu.classList.contains('open')) {
+    menu.classList.remove('open');
+    document.getElementById('navBtn').innerHTML = '<i data-lucide="menu"></i>';
+  }
+
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  setTimeout(() => {
+    initReveal();
+    lucide.createIcons();
+  }, 50);
+}
+
+window.addEventListener('hashchange', navigate);
+
+// ============ SCROLL REVEAL ============
+let revealObserver;
+function initReveal() {
+  if (revealObserver) revealObserver.disconnect();
+  revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal:not(.is-visible)').forEach(el => revealObserver.observe(el));
+}
+
+// ============ MODAL ============
+function openModal(html) {
+  document.getElementById('modalBox').innerHTML = html;
+  document.getElementById('modal').classList.add('open');
+  lucide.createIcons();
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('modal').addEventListener('click', e => {
+  if (e.target.id === 'modal') closeModal();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+const PROD_DETAILS = {
+  "ARTEVIA": { comp: "Ekstrak Artemisia annua 200 mg", ind: "Membantu memelihara daya tahan tubuh", dose: "1 kapsul 2x sehari", bpom: "DTL2324001234" },
+  "SIRVANA": { comp: "Ekstrak daun sirih 100 mg", ind: "Obat kumur herbal untuk kesehatan mulut", dose: "Kumur 15 ml, 2-3x sehari", bpom: "DBL2324001235" },
+  "NETRABIRU": { comp: "Ekstrak bunga telang 50 mg", ind: "Membantu menjaga kesehatan mata", dose: "1 tetes pada mata 2-3x sehari", bpom: "DBL2324001236" },
+  "AMERTAVIA": { comp: "Echinacea extract 250 mg, Zinc 10 mg", ind: "Membantu meningkatkan sistem imun", dose: "1 kapsul 1x sehari", bpom: "DTL2324001237" },
+  "CENTELIA": { comp: "Ekstrak Centella asiatica 300 mg", ind: "Menenangkan pikiran dan meningkatkan konsentrasi", dose: "1 kapsul 2x sehari", bpom: "DTL2324001238" },
+  "JAHENDRA": { comp: "Ekstrak jahe merah 500 mg", ind: "Menghangatkan badan, meredakan masuk angin", dose: "1 sachet dalam 150 ml air panas", bpom: "DBL2324001239" },
+  "HEPARUNA": { comp: "Ekstrak temulawak 400 mg", ind: "Memelihara fungsi hati", dose: "1 kapsul 2x sehari", bpom: "DTL2324001240" },
+  "KURKUFLEX": { comp: "Ekstrak kunyit 300 mg, Piperin 5 mg", ind: "Meredakan nyeri sendi", dose: "1 tablet 2x sehari", bpom: "DBL2324001241" },
+  "PARANOVA 500": { comp: "Paracetamol 500 mg", ind: "Meredakan nyeri dan demam", dose: "1 tablet 3-4x sehari", bpom: "DBL2324001254" },
+  "PROFENIA 200": { comp: "Ibuprofen 200 mg", ind: "Meredakan nyeri dan inflamasi ringan", dose: "1 tablet 3-4x sehari", bpom: "DBL2324001255" }
+};
+
+function openProduct(i) {
+  const p = PRODUCTS[i];
+  const d = PROD_DETAILS[p.n] || {
+    comp: "[Data sedang dilengkapi]", ind: "[Data sedang dilengkapi]",
+    dose: "[Data sedang dilengkapi]", bpom: "[Data sedang dilengkapi]"
+  };
+  openModal(`
+    <button class="modal-close" onclick="closeModal()" aria-label="Tutup">${icon('x')}</button>
+    <div class="modal-box split" style="padding:0;box-shadow:none;background:transparent;max-height:none">
+      <div class="media" style="border-radius:1rem">${productImg(p)}</div>
+      <div>
+        <h3 style="margin-top:0">${p.n}</h3>
+        <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem">
+          <span class="pill">${CATS[p.c]}</span>
+          <span class="pill">${FORMS[p.f]}</span>
+          <span class="pill">${GOL[+RAW.split(",")[i]?.split(":")[0] === p.n ? 0 : 0] || GOL[0]}</span>
+        </div>
+        <p style="margin:.6rem 0"><b>Komposisi:</b><br><span style="color:var(--mu)">${d.comp}</span></p>
+        <p style="margin:.6rem 0"><b>Indikasi:</b><br><span style="color:var(--mu)">${d.ind}</span></p>
+        <p style="margin:.6rem 0"><b>Dosis:</b><br><span style="color:var(--mu)">${d.dose}</span></p>
+        <p style="margin:.6rem 0"><b>No. BPOM:</b><br><span style="color:var(--mu)">${d.bpom}</span></p>
+        <p style="font-size:13px;color:var(--mu);margin-top:1rem;padding-top:1rem;border-top:1px solid var(--ln)">
+          <i>Informasi konseptual untuk tugas kuliah. Bukan produk terdaftar resmi.</i>
+        </p>
+      </div>
+    </div>
+  `);
+}
+
+// ============ RENDER: BERANDA ============
+const VALUES = [
+  ['Accountability','Bertanggung jawab atas keputusan dan pekerjaan.'],
+  ['Research-minded','Bukti ilmiah sebagai dasar pengembangan.'],
+  ['Trustworthiness','Kepercayaan lewat keterbukaan dan konsistensi.'],
+  ['Excellence','Memperbaiki mutu secara berkelanjutan.'],
+  ['Meaningful Collaboration','Kolaborasi yang membawa manfaat.'],
+  ['Awareness','Peka pada kebutuhan masyarakat dan lingkungan.']
+];
+
+const VALUES_ICONS = ['shield','microscope','handshake','award','users','leaf'];
+
+function renderValues(containerId) {
+  document.getElementById(containerId).innerHTML = VALUES.map((v, i) => `
+    <div class="card">
+      <div class="card-icon">${icon(VALUES_ICONS[i])}</div>
+      <h3>${v[0]}</h3>
+      <p style="color:var(--mu);font-size:14px;margin:0">${v[1]}</p>
+    </div>
+  `).join('');
+}
+
+// Stats
+const STATS = [
+  [2018,'Tahun Berdiri','Awal perjalanan ARTEMA'],
+  [6,'Nilai Perusahaan','Prinsip pengembangan'],
+  [60,'Produk Konseptual','Portofolio tugas kuliah'],
+  [4,'Pilar CSR','Rancangan program sosial']
+];
+document.getElementById('statsGrid').innerHTML = STATS.map(s => `
+  <div class="card">
+    <span class="num" data-n="${s[0]}">0</span>
+    <b style="display:block;margin-top:.25rem">${s[1]}</b>
+    <small style="color:var(--mu);font-size:12px">${s[2]}</small>
+  </div>
+`).join('');
+
+// Animate stats
+function animateStats() {
+  document.querySelectorAll('[data-n]').forEach(el => {
+    const target = +el.dataset.n;
+    if (!target) return;
+    let current = 0;
+    const step = Math.ceil(target / 40);
+    const timer = setInterval(() => {
+      current = Math.min(target, current + step);
+      el.textContent = current;
+      if (current >= target) clearInterval(timer);
+    }, 30);
+  });
+}
+
+// Values (dua tempat)
+renderValues('valuesGrid');
+renderValues('valuesFull');
+renderValues('valuesVisiMisi');
+
+// Featured products
+[0, 3, 10, 40, 50, 56].forEach(i => {
+  document.getElementById('featuredProducts').innerHTML += productCard(PRODUCTS[i]);
+});
+
+// Activities
+const ACTIVITIES = [
+  ['Meracik di laboratorium', 'Tim R&D menguji ekstrak tanaman sebelum jadi formula.', 'asset/kegiatan/kegiatan-lab.jpeg', 'flask-conical'],
+  ['Memproduksi dengan teliti', 'Setiap batch dicek berlapis sebelum dikemas.', 'asset/kegiatan/kegiatan-produksi.jpeg', 'factory'],
+  ['Berbagi di masyarakat', 'Kelas obat dan kebun TOGA langsung di desa.', 'asset/kegiatan/kegiatan-edukasi.jpeg', 'users'],
+  ['Mendidik calon farmasis', 'Magang dan beasiswa bagi mahasiswa berprestasi.', 'asset/kegiatan/kegiatan-magang.jpeg', 'graduation-cap']
+];
+document.getElementById('activitiesGrid').innerHTML = ACTIVITIES.map(a => `
+  <div class="card" style="padding:0;overflow:hidden">
+    <div class="media" style="aspect-ratio:16/10;border-radius:0">${medIMG(a[2], a[0])}</div>
+    <div style="padding:1.25rem">
+      <div class="card-icon" style="margin-bottom:.75rem">${icon(a[3], 20)}</div>
+      <h3>${a[0]}</h3>
+      <p style="color:var(--mu);font-size:14px;margin:0">${a[1]}</p>
+    </div>
+  </div>
+`).join('');
+
+// News
+const NEWS = [
+  { cat: 'Sains & Botani', title: 'Kenali Artemisia annua: tanaman yang menginspirasi penemuan artemisinin', body: 'Artemisia annua adalah sumber artemisinin, senyawa yang dikembangkan menjadi terapi malaria. Penemuan ini mengantar Tu Youyou meraih Nobel Fisiologi atau Kedokteran 2015.' },
+  { cat: 'Mutu & Keamanan', title: 'Mengapa pengendalian mutu penting dalam industri farmasi?', body: 'Pengendalian mutu memastikan setiap batch obat memenuhi spesifikasi keamanan, khasiat, dan kualitas, dijalankan oleh tim QC dan QA.' },
+  { cat: 'Dunia Farmasi', title: 'Mengenal peran QA dan QC dalam proses farmasi', body: 'QC menguji bahan dan produk berdasarkan spesifikasi, sedangkan QA mengawal sistem mutu, dokumentasi, dan keputusan pelulusan. Keduanya saling melengkapi.' }
+];
+const NEWS_ICONS = ['leaf','shield-check','beaker'];
+document.getElementById('newsGrid').innerHTML = NEWS.map((n, i) => `
+  <div class="card" onclick="openNews(${i})" style="cursor:pointer;padding:0;overflow:hidden">
+    <div class="media" style="aspect-ratio:16/8;border-radius:0;background:var(--lav);display:grid;place-items:center">
+      <i data-lucide="${NEWS_ICONS[i]}" style="width:56px;height:56px;color:var(--p);opacity:.5"></i>
+    </div>
+    <div style="padding:1.25rem">
+      <span class="pill">${n.cat}</span>
+      <h3 style="margin:.5rem 0 0;font-size:1rem">${n.title}</h3>
+    </div>
+  </div>
+`).join('');
+
+function openNews(i) {
+  const n = NEWS[i];
+  openModal(`
+    <button class="modal-close" onclick="closeModal()" aria-label="Tutup">${icon('x')}</button>
+    <span class="pill">${n.cat}</span>
+    <h3 style="margin-top:.5rem">${n.title}</h3>
+    <p style="color:var(--mu)">${n.body}</p>
+    <p style="color:var(--mu);font-size:13px"><i>Informasi umum, bukan pengganti saran tenaga kesehatan.</i></p>
+  `);
+}
+
+// ============ RENDER: TENTANG ============
+document.getElementById('storyContent').innerHTML = [
+  'PT. ARTEMA PHARMA didirikan pada 2018 dengan keyakinan sederhana: inovasi kesehatan tidak selalu berawal dari hal besar, tetapi dari keberanian bertanya, meneliti, dan terus memperbaiki diri.',
+  'Nama ARTEMA terinspirasi dari Artemisia annua, tanaman yang berperan penting dalam penemuan artemisinin, sedangkan PHARMA mencerminkan komitmen pada ilmu pengetahuan, mutu, keamanan, dan tanggung jawab kefarmasian.',
+  'Pada tahun-tahun awal, ARTEMA menyusun arah pengembangan, memetakan kebutuhan produk, dan membangun budaya kerja yang teliti. Memasuki 2023, semangat eksplorasi makin erat dengan riset bahan alam dan flora Sumatera Selatan.',
+  'Kini ARTEMA membawa satu prinsip: perubahan besar berawal dari langkah kecil yang konsisten.'
+].map(t => `<p>${t}</p>`).join('');
+
+const TIMELINE = [
+  [2018,'The Beginning','Langkah Pertama','Perusahaan konseptual didirikan dengan visi mengembangkan produk kesehatan lewat pendekatan ilmiah.'],
+  [2019,'Laying the Foundation','Membangun Fondasi','Pemetaan kebutuhan produk, konsep formulasi, penelusuran bahan baku, dan rancangan dokumentasi.'],
+  [2020,'Resilience in Change','Bertumbuh dalam Perubahan','Mengembangkan komunikasi informasi kesehatan dan meninjau prioritas produk.'],
+  [2021,'Research Takes Shape','Riset Mulai Terarah','Memetakan portofolio pengembangan dan rencana evaluasi mutu.'],
+  [2022,'Building Connections','Membuka Kolaborasi','Merancang jejaring dengan calon pemasok, mitra distribusi, institusi pendidikan.'],
+  [2023,'Nature Meets Science','Alam Bertemu Sains','Amerta Bumandhala dan identitas Farmasi UNSRI Angkatan 2023 memperkaya narasi.'],
+  [2024,'Quality by Design','Mutu Sejak Awal','Memperkuat konsep manajemen mutu, evaluasi risiko, dan alur produksi.'],
+  [2025,'Connecting the Value Chain','Memperkuat Rantai Pasok','Merancang kemitraan distribusi, pengelolaan informasi produk.'],
+  [2026,'Growing with Purpose','Bertumbuh dengan Tujuan','Menyatukan pengembangan produk, digitalisasi, dan program sosial-lingkungan.']
+];
+document.getElementById('timelineContainer').innerHTML = TIMELINE.map(t => `
+  <div class="card">
+    <span class="year">${t[0]}</span>
+    <small style="color:var(--t);font-weight:700;display:block;margin-bottom:.25rem">${t[1]}</small>
+    <h4 style="font-size:1rem;margin:.25rem 0">${t[2]}</h4>
+    <p style="font-size:14px;color:var(--mu);margin:0">${t[3]}</p>
+  </div>
+`).join('');
+
+const MISI = [
+  ['1','Inovasi Berbasis Sains','Penelitian dan pengembangan dengan pendekatan ilmiah serta perhatian pada mutu dan keamanan.','flask-conical'],
+  ['2','Menjaga Mutu di Setiap Tahapan','Pengendalian mutu, dokumentasi, dan manajemen risiko sebagai bagian proses kerja.','shield-check'],
+  ['3','Menggali Biodiversitas Indonesia','Eksplorasi bahan alam lokal secara bertanggung jawab dan berbasis bukti.','leaf'],
+  ['4','Membangun Kemitraan Tepercaya','Bersama institusi pendidikan, pemasok, mitra distribusi, dan komunitas.','handshake'],
+  ['5','Mendekatkan Pengetahuan Kesehatan','Edukasi penggunaan obat yang rasional dan kegiatan sosial relevan.','book-open'],
+  ['6','Tumbuh secara Berkelanjutan','Efisiensi sumber daya, kepedulian lingkungan, dan perbaikan berkelanjutan.','trending-up']
+];
+
+function renderMisi(containerId) {
+  document.getElementById(containerId).innerHTML = MISI.map(m => `
+    <div class="card">
+      <div class="card-icon">${icon(m[3])}</div>
+      <h3 style="font-size:1rem">${m[1]}</h3>
+      <p style="color:var(--mu);font-size:14px;margin:0">${m[2]}</p>
+    </div>
+  `).join('');
+}
+renderMisi('misiGrid');
+renderMisi('misiGridFull');
+
+// ============ RENDER: FILOSOFI ============
+const LOGO_ELEMENTS = [
+  ['microscope','Potret Tu Youyou & Mangkuk Hygieia','Sosok ilmuwan wanita terkemuka Prof. Tu Youyou (peraih Nobel Kedokteran 2015 atas penemuan artemisinin) melambangkan ketekunan riset ilmiah.'],
+  ['type','Lengkungan Huruf A','Huruf kapital A yang menjulang anggun dengan gradasi ungu-magenta merepresentasikan inisial ARTEMA sekaligus AMERTA.'],
+  ['leaf','Dua Helai Daun Nusantara','Sepasang daun hijau melambangkan biodiversitas flora Indonesia dan akar perusahaan pada farmakognosi.'],
+  ['droplets','Pancaran Air Amerta','Aliran air jernih mencerminkan makna Amerta (air keabadian) dan identitas angkatan Farmasi UNSRI 2023.'],
+  ['flower-2','Batik Buketan & Bunga Telang','Ornamen bunga bergaya Batik Buketan Nusantara berpadu bunga telang melambangkan titik temu estetika dan fitokimia.'],
+  ['pen-tool','Tipografi ARTEMA PHARMA','Huruf serif proporsional dengan gradasi ungu-biru mencerminkan kredibilitas akademis dan stabilitas kelembagaan.']
+];
+document.getElementById('logoElements').innerHTML = LOGO_ELEMENTS.map(e => `
+  <div class="card">
+    <div class="card-icon">${icon(e[0])}</div>
+    <h3 style="font-size:1rem">${e[1]}</h3>
+    <p style="color:var(--mu);font-size:14px;margin:0">${e[2]}</p>
+  </div>
+`).join('');
+
+document.getElementById('logoValuesGrid').innerHTML = VALUES.map((v, i) => `
+  <div class="card" style="background:var(--card)">
+    <b style="color:var(--p);font-size:1rem">${v[0]}</b>
+    <p style="font-size:13px;color:var(--mu);margin:.35rem 0 0">${v[1]}</p>
+  </div>
+`).join('');
+
+// ============ RENDER: ORGANISASI ============
+const BOARD = [
+  ['Presiden Komisaris','user-cog'],
+  ['Komisaris','user-check'],
+  ['Direktur Utama','crown'],
+  ['Direktur Operasional','briefcase'],
+  ['Direktur Mutu & Kepatuhan','shield-check'],
+  ['Direktur Riset & Pengembangan','microscope'],
+  ['Direktur Keuangan','wallet'],
+  ['Direktur Komersial','trending-up'],
+  ['Direktur SDM & Umum','users'],
+  ['Direktur Teknologi Informasi','cpu']
+];
+document.getElementById('boardGrid').innerHTML = BOARD.map(b => `
+  <div class="card" style="text-align:center">
+    <div style="width:72px;height:72px;border-radius:50%;background:var(--lav);display:grid;place-items:center;margin:0 auto .75rem;color:var(--p)">
+      ${icon(b[1], 32)}
+    </div>
+    <h4 style="font-size:.95rem;margin:0">${b[0]}</h4>
+    <small style="color:var(--mu)">Jabatan simulasi</small>
+  </div>
+`).join('');
+
+const DEPTS = [
+  ['Quality Assurance','Audit internal, validasi, keputusan rilis produk.','shield-check'],
+  ['Quality Control','Menguji bahan baku sampai produk jadi.','microscope'],
+  ['Produksi','Meracik, mencetak, mengemas sesuai CPOB.','factory'],
+  ['R&D & Fitokimia','Meneliti ekstrak dan merancang formula baru.','flask-conical'],
+  ['PPIC & Pengadaan','Menyusun jadwal produksi, stok, pembelian.','package'],
+  ['Pemasaran','Mengenalkan produk dan menjawab pelanggan.','megaphone'],
+  ['Regulatory Affairs','Registrasi BPOM dan kepatuhan aturan.','file-text'],
+  ['Teknik & Utilitas','Merawat mesin, air proses, dan fasilitas.','wrench'],
+  ['Farmakovigilans','Memantau keamanan obat dan efek samping.','activity'],
+  ['K3 & Lingkungan','Keselamatan kerja dan pengelolaan limbah.','hard-hat'],
+  ['SDM & Umum','Rekrutmen, pelatihan, kesejahteraan.','users'],
+  ['Teknologi Informasi','Sistem data, keamanan siber, digitalisasi.','cpu']
+];
+document.getElementById('departmentsGrid').innerHTML = DEPTS.map(d => `
+  <div class="card">
+    <div class="card-icon">${icon(d[2])}</div>
+    <h4 style="font-size:.95rem;margin:.25rem 0">${d[0]}</h4>
+    <p style="font-size:13px;color:var(--mu);margin:0">${d[1]}</p>
+  </div>
+`).join('');
+
+// ============ RENDER: LEGALITAS ============
+const LEGAL = [
+  ['Nama Resmi','PT. ARTEMA PHARMA INDONESIA','Perseroan Terbatas Industri Farmasi','building-2'],
+  ['NIB','9120230261019-OSS','Terdaftar OSS Berbasis Risiko','file-badge'],
+  ['Izin Usaha Industri Farmasi','HK.02.02/I/2324/2023','Kementerian Kesehatan RI','file-check'],
+  ['NPWP','42.891.203.4-312.000','KPP Pratama Ilir Timur','receipt'],
+  ['Akta Notaris','AHU-0023412.AH.01.01.2018','Kemenkumham RI','file-signature'],
+  ['Domisili','Indralaya, Ogan Ilir','Kawasan Riset & Pendidikan Farmasi','map-pin']
+];
+document.getElementById('legalGrid').innerHTML = LEGAL.map(l => `
+  <div class="card">
+    <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem">
+      <div class="card-icon" style="margin:0;width:36px;height:36px">${icon(l[3], 18)}</div>
+      <small style="color:var(--mu);font-size:12px">${l[0]}</small>
+    </div>
+    <b style="font-family:monospace;color:var(--p);display:block;font-size:13px;word-break:break-all">${l[1]}</b>
+    <small style="color:var(--mu);font-size:12px">${l[2]}</small>
+  </div>
+`).join('');
+
+const CERTS = [
+  ['CPOB (BPOM RI)','Acuan utama sediaan padat, cair, dan semi padat.','file-badge','Acuan Utama'],
+  ['CPOTB Terstandar','Pengolahan ekstrak bahan alam terstandar.','leaf','Fitofarmaka'],
+  ['Sertifikasi Halal BPJPH','Sistem Jaminan Produk Halal terintegrasi.','sparkles','Jaminan Halal'],
+  ['ISO 9001:2015','Sistem Manajemen Mutu internasional.','award','ISO'],
+  ['ISO 14001:2015','Manajemen Lingkungan terpadu.','globe','ISO'],
+  ['ISO 45001:2018','Keselamatan dan Kesehatan Kerja.','hard-hat','ISO']
+];
+document.getElementById('certsGrid').innerHTML = CERTS.map(c => `
+  <div class="card">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.5rem">
+      <div class="card-icon" style="margin:0">${icon(c[2])}</div>
+      <span class="pill">${c[3]}</span>
+    </div>
+    <h4 style="font-size:.95rem;margin:.25rem 0">${c[0]}</h4>
+    <p style="font-size:13px;color:var(--mu);margin:0">${c[1]}</p>
+  </div>
+`).join('');
+
+// ============ RENDER: PRODUK ============
+document.getElementById('categoryCards').innerHTML = GOL.map((g, i) => {
+  const count = PRODUCTS.filter(p => p.c === i).length;
+  const icons = ['leaf','circle-dot','pill','sparkles'];
+  return `
+    <div class="card" onclick="document.getElementById('filterGol').value='${i}';renderProducts();" style="cursor:pointer">
+      <div class="card-icon">${icon(icons[i])}</div>
+      <h4 style="font-size:.95rem;margin:0">${g}</h4>
+      <span class="pill" style="margin-top:.5rem">Lihat ${count} produk →</span>
+    </div>
+  `;
+}).join('');
+
+document.getElementById('filterCat').innerHTML = '<option value="*">Semua kategori</option>' +
+  CATS.map((c, i) => `<option value="${i}">${c}</option>`).join('');
+document.getElementById('filterForm').innerHTML = '<option value="*">Semua bentuk sediaan</option>' +
+  FORMS.map((c, i) => `<option value="${i}">${c}</option>`).join('');
+document.getElementById('filterGol').innerHTML = '<option value="*">Semua golongan</option>' +
+  GOL.map((c, i) => `<option value="${i}">${c}</option>`).join('');
+
+function renderProducts() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  const c = document.getElementById('filterCat').value;
+  const f = document.getElementById('filterForm').value;
+  const g = document.getElementById('filterGol').value;
+  const filtered = PRODUCTS.filter(p =>
+    p.n.toLowerCase().includes(q) &&
+    (c === '*' || p.c === +c) &&
+    (f === '*' || p.f === +f) &&
+    (g === '*' || p.c === +g)
+  );
+  document.getElementById('productsGrid').innerHTML = filtered.map(productCard).join('') ||
+    '<p style="color:var(--mu)">Produk tidak ditemukan.</p>';
+  document.getElementById('countText').textContent = `Menampilkan ${filtered.length} dari 60 produk`;
+  lucide.createIcons();
+}
+['searchInput','filterCat','filterForm','filterGol'].forEach(id => {
+  document.getElementById(id).addEventListener('input', renderProducts);
+});
+
+// ============ RENDER: RISET ============
+const FLOW = [
+  ['Penerimaan Bahan','Pemeriksaan dokumen dan kondisi awal','inbox'],
+  ['Sampling & QC','Evaluasi sesuai spesifikasi','search'],
+  ['Penimbangan','Verifikasi identitas dan jumlah','scale'],
+  ['Pencampuran','Sesuai formulasi dan prosedur','blend'],
+  ['IPC','Pemantauan parameter kritis','activity'],
+  ['Pengemasan','Cek kemasan dan label','package'],
+  ['Pelulusan','Oleh fungsi berwenang','check-circle'],
+  ['Distribusi','Sesuai persyaratan produk','truck']
+];
+document.getElementById('flowContainer').innerHTML = FLOW.map((s, i) => `
+  <div class="step">
+    <div class="card-icon" style="margin:0 auto .5rem;width:36px;height:36px">${icon(s[2], 18)}</div>
+    <b style="font-size:13px;display:block">${s[0]}</b>
+    <small style="color:var(--mu);font-size:11px">${s[1]}</small>
+  </div>
+  ${i < FLOW.length - 1 ? '<span class="arrow">' + icon('chevron-right', 18) + '</span>' : ''}
+`).join('');
+
+document.getElementById('certTargets').innerHTML = CERTS.slice(0, 4).map(c => `
+  <div class="card">
+    <div class="card-icon">${icon(c[2])}</div>
+    <h4 style="font-size:.95rem;margin:0">${c[0]}</h4>
+    <span class="pill" style="margin-top:.5rem">Target</span>
+  </div>
+`).join('');
+
+// ============ RENDER: CSR ============
+const CSR_PROGRAMS = [
+  ['Sahabat Obat','<b>Kenali obatnya, pahami penggunaannya.</b><br>Edukasi literasi obat: membaca kemasan, beda obat bebas dan resep, pentingnya bertanya ke apoteker.','pill'],
+  ['Langkah Sehat Bersama','<b>Lebih dekat, lebih peduli.</b><br>Pendampingan komunitas lewat penyuluhan promotif-preventif bersama tenaga kesehatan.','users'],
+  ['Rimba Lestari','<b>Menjaga alam, merawat sumber kehidupan.</b><br>Pengenalan tanaman obat lokal, penanaman, dan edukasi biodiversitas.','leaf'],
+  ['Tunas Cendekia','<b>Rasa ingin tahu hari ini, inovasi masa depan.</b><br>Literasi sains dan kefarmasian untuk pelajar lewat permainan edukatif.','graduation-cap']
+];
+document.getElementById('csrPrograms').innerHTML = CSR_PROGRAMS.map(p => `
+  <div class="card">
+    <div class="card-icon">${icon(p[2])}</div>
+    <h3>${p[0]}</h3>
+    <p style="color:var(--mu);font-size:14px;margin:0">${p[1]}</p>
+  </div>
+`).join('');
+
+const CSR_ACTIVITIES = [
+  {
+    slug: 'penyuluhan-puding-susu-jahe',
+    title: 'Puding Susu Herbal Berbasis Jahe',
+    pill: 'Kegiatan Pengabdian Masyarakat',
+    desc: 'Pengabdian masyarakat bersama LPPM Unsri: pelatihan pengembangan puding susu herbal berbasis jahe untuk warga Desa Ulak Kerbau Baru, 5 September 2026.',
+    meta: [['Tanggal','5 September 2026'],['Lokasi','Desa Ulak Kerbau Baru'],['Mitra','LPPM Universitas Sriwijaya'],['Pelaksana','Tim Pengabdian Masyarakat Farmasi UNSRI']],
+    body: [['Profil Kegiatan','Program pengabdian yang mengangkat penganekaragaman pangan berbasis bahan lokal: jahe dipadukan dengan susu menjadi puding — contoh sederhana pangan fungsional.'],['Apa yang Dilakukan','Penyuluhan manfaat jahe, pelatihan praktik membuat puding susu herbal, dan diskusi pengembangan olahan rumahan.'],['Manfaat','Warga mendapat resep yang mudah direplikasi dan gambaran cara mengolah bahan lokal.'],['Catatan','Kegiatan nyata (dokumentasi tersedia). Tanpa angka peserta atau klaim dampak.']],
+    icon: 'cooking-pot'
+  },
+  {
+    slug: 'hkmf-peduli-2026',
+    title: 'HKMF Peduli 2026: Kita Cerita',
+    pill: 'Kegiatan Sosial 2026',
+    desc: 'Kunjungan sosial ke Panti Asuhan Aisyiyah Humairoh Palembang: cerita, permainan, dan inspirasi cita-cita.',
+    meta: [['Tahun','2026'],['Lokasi','Panti Asuhan Aisyiyah Humairoh, Palembang'],['Tema','Kasih Tawa dan Cita-cita'],['Pelaksana','HKMF Peduli']],
+    body: [['Profil','Kunjungan sosial ke Panti Asuhan Aisyiyah Humairoh Palembang dengan tema "Kita Cerita: Kasih Tawa dan Cita-cita".'],['Kegiatan','Membaca dongeng dan bermain bersama, sesi bercerita bebas, obrolan tentang mimpi dan cita-cita.'],['Manfaat','Menghadirkan keceriaan, menumbuhkan keberanian anak bercerita, membangun hubungan baik.'],['Catatan','Kegiatan nyata. Tanpa angka peserta atau klaim dampak.']],
+    icon: 'heart-handshake'
+  },
+  {
+    slug: 'bank-sampah-pelangi',
+    title: 'Monitoring Biokomposter & Pilah Sampah',
+    pill: 'Kegiatan Sosial 2025',
+    desc: 'Community development bersama tim KSE Unsri dan warga Bank Sampah Pelangi: pemantauan biokomposter dan edukasi pemilahan sampah, 25 Oktober 2025.',
+    meta: [['Tanggal','25 Oktober 2025'],['Lokasi','Bank Sampah Pelangi'],['Pelaksana','Community Development KSE Unsri']],
+    body: [['Profil','Rangkaian community development di Bank Sampah Pelangi: pemantauan instalasi biokomposter dan penguatan kebiasaan pemilahan sampah.'],['Kegiatan','Memeriksa kondisi biokomposer (aroma, kelembapan, hasil kompos), membahas pemilahan organik-anorganik.'],['Manfaat','Kualitas kompos lebih stabil, kebiasaan memilah lebih konsisten, catatan pemantauan berkelanjutan.'],['Catatan','Kegiatan nyata (dokumentasi tersedia). Tanpa angka atau klaim dampak.']],
+    icon: 'recycle'
+  },
+  {
+    slug: 'penyuluhan-langkah-sehat',
+    title: 'Langkah Sehat Bersama',
+    pill: 'Contoh Rancangan',
+    desc: 'Penyuluhan kesehatan promotif-preventif untuk komunitas desa bersama tenaga kesehatan berwenang.',
+    meta: [['Sasaran','Komunitas desa'],['Mitra','Tenaga kesehatan berwenang'],['Status','Rancangan program']],
+    body: [['Profil','Penyuluhan kesehatan promotif-preventif untuk komunitas desa bersama tenaga kesehatan berwenang.'],['Rencana','Topik disesuaikan kebutuhan: penggunaan obat baik dan benar, pola hidup bersih, pemeriksaan dasar.'],['Sasaran','Warga lebih memahami kapan perlu ke fasilitas kesehatan dan cara memakai obat tepat.'],['Catatan','Simulasi rancangan; indikator keberhasilan disusun bersama mitra.']],
+    icon: 'stethoscope'
+  },
+  {
+    slug: 'eco-brick',
+    title: 'Eco Brick',
+    pill: 'Contoh Rancangan',
+    desc: 'Botol plastik bekas dipadatkan menjadi bata ekologis untuk taman dan sarana menanam tanaman obat.',
+    meta: [['Sasaran','Warga & pelajar'],['Status','Rancangan program']],
+    body: [['Profil','Mengubah botol plastik bekas menjadi ecobrick — bata ekologis buatan sendiri.'],['Tahapan','1) Kumpulkan botol bersih kering. 2) Pilah plastik. 3) Padatkan plastik ke botol bertahap. 4) Rangkai menjadi bangku taman atau dinding kebun.'],['Semangat','"Merawat Lingkungan Hari Ini, untuk Kehidupan yang Lebih Baik Besok."'],['Catatan','Simulasi rancangan; hasil digunakan untuk kebutuhan komunitas.']],
+    icon: 'recycle'
+  },
+  {
+    slug: 'pojok-sains-tunas-cendekia',
+    title: 'Pojok Sains Tunas Cendekia',
+    pill: 'Contoh Rancangan',
+    desc: 'Eksperimen aman dan pengenalan profesi apoteker untuk pelajar dalam kerja sama dengan sekolah.',
+    meta: [['Sasaran','Pelajar'],['Mitra','Sekolah'],['Status','Rancangan program']],
+    body: [['Profil','Pojok sains untuk pelajar: eksperimen aman sekaligus pengenalan profesi apoteker.'],['Rencana','Eksperimen perubahan warna ekstrak kunyit dan telang sebagai indikator asam-basa, permainan tebak kemasan obat, tanya jawab karier.'],['Sasaran','Pelajar mengenal sains secara menyenangkan dan mulai mengenal karier kefarmasian.'],['Catatan','Simulasi rancangan; semua eksperimen aman dan sederhana.']],
+    icon: 'flask-round'
+  }
+];
+
+document.getElementById('csrActivities').innerHTML = CSR_ACTIVITIES.map(a => `
+  <a href="#kegiatan-${a.slug}" style="text-decoration:none;color:inherit">
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="media" style="aspect-ratio:16/9;border-radius:0;background:var(--lav);display:grid;place-items:center">
+        <i data-lucide="${a.icon}" style="width:56px;height:56px;color:var(--p);opacity:.5"></i>
+      </div>
+      <div style="padding:1.25rem">
+        <span class="pill">${a.pill}</span>
+        <h3 style="margin:.5rem 0 0;font-size:1rem">${a.title}</h3>
+        <p style="color:var(--mu);font-size:14px;margin:.35rem 0 0">${a.desc}</p>
+      </div>
+    </div>
+  </a>
+`).join('');
+
+function renderKegiatanDetail(item) {
+  document.getElementById('kegiatanBody').innerHTML = `
+    <a href="#csr" style="color:var(--t);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:.35rem;margin-bottom:1.25rem">
+      ${icon('arrow-left', 16)} Kembali ke ARTEMA Peduli
+    </a>
+    <div class="media" style="aspect-ratio:16/9;margin-bottom:1.5rem;background:var(--lav);display:grid;place-items:center">
+      <i data-lucide="${item.icon}" style="width:80px;height:80px;color:var(--p);opacity:.4"></i>
+    </div>
+    <span class="pill">${item.pill}</span>
+    <h1 style="font-size:clamp(1.7rem,4vw,2.4rem);margin:.5rem 0 1rem">${item.title}</h1>
+    <div style="display:grid;grid-template-columns:auto 1fr;gap:.5rem 1rem;margin-bottom:1.5rem;font-size:14px">
+      ${item.meta.map(m => `<b style="color:var(--tx)">${m[0]}</b><span style="color:var(--mu)">${m[1]}</span>`).join('')}
+    </div>
+    ${item.body.map(s => `<h3 style="margin:1.25rem 0 .4rem;font-size:1.05rem">${s[0]}</h3><p style="margin:0 0 .5rem;color:var(--mu)">${s[1]}</p>`).join('')}
+    <div class="dot-line"></div>
+    <h3 style="margin:0 0 .75rem">Kegiatan Lainnya</h3>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem">
+      ${CSR_ACTIVITIES.filter(c => c.slug !== item.slug).map(c => `<a class="pill" href="#kegiatan-${c.slug}" style="text-decoration:none">${c.title}</a>`).join('')}
+    </div>
+  `;
+  lucide.createIcons();
+}
+
+// ============ RENDER: KARIR ============
+const KARIR_BIDANG = [
+  ['Penjualan & Pemasaran','Sales, account, product, brand.','trending-up'],
+  ['Produksi & Operasional','Produksi, pengemasan, plant ops.','factory'],
+  ['Mutu & Regulatory','QA, QC, registrasi produk.','shield-check'],
+  ['Riset & Teknik','R&D, laboratorium, teknisi.','microscope'],
+  ['Rantai Pasok','Pengadaan, gudang, logistik.','truck'],
+  ['SDM & Umum','HR, pelatihan, GA, TI.','users']
+];
+document.getElementById('karirBidang').innerHTML = KARIR_BIDANG.map(b => `
+  <div class="card">
+    <div class="card-icon">${icon(b[2])}</div>
+    <h4 style="font-size:.95rem;margin:.25rem 0">${b[0]}</h4>
+    <p style="font-size:13px;color:var(--mu);margin:0">${b[1]}</p>
+  </div>
+`).join('');
+
+document.getElementById('alurSeleksi').innerHTML = [
+  ['Kirim Lamaran','send'],
+  ['Seleksi Berkas','file-check'],
+  ['Tes & Wawancara','mic'],
+  ['Pemeriksaan Kesehatan','stethoscope'],
+  ['Tawaran Kerja','handshake']
+].map((s, i, arr) => `
+  <div class="step">
+    <div class="card-icon" style="margin:0 auto .5rem;width:36px;height:36px">${icon(s[1], 18)}</div>
+    <b style="font-size:13px">${s[0]}</b>
+  </div>
+  ${i < arr.length - 1 ? '<span class="arrow">' + icon('chevron-right', 18) + '</span>' : ''}
+`).join('');
+
+document.getElementById('magangInfo').innerHTML = [
+  ['Syarat','Mahasiswa aktif Farmasi, Kimia, Biologi, Teknik Kimia, atau Profesi Apoteker; IPK min. 3,00; surat pengantar, CV, transkrip.','file-check'],
+  ['Yang Didapat','Mentor, sertifikat, uang saku, proyek mini, peluang jalur prioritas rekrutmen.','gift'],
+  ['Kegiatan','Orientasi CPOB, rotasi QC/Produksi/R&D, proyek mini, presentasi akhir.','calendar'],
+  ['Durasi','1–3 bulan; pendaftaran dibuka tiap semester.','clock']
+].map(m => `
+  <div class="card">
+    <div class="card-icon">${icon(m[2])}</div>
+    <h4 style="font-size:.95rem;margin:.25rem 0">${m[0]}</h4>
+    <p style="font-size:13px;color:var(--mu);margin:0">${m[1]}</p>
+  </div>
+`).join('');
+
+// ============ RENDER: TESTIMONI ============
+const TESTIMONIALS = [
+  { name: 'apt. Sarah Nabila, S.Farm.', role: 'QA Manager', text: 'Di ARTEMA, integritas mutu bukan sekadar slogan di dinding, melainkan keputusan nyata setiap hari. Ketika kami meninjau batch record, kami tahu ada keselamatan pasien yang kami pertanggungjawabkan.', icon: 'user-check', color: 'var(--p)' },
+  { name: 'M. Rizky Pratama, M.Sc.', role: 'Senior R&D Scientist', text: 'Mengeksplorasi tanaman endemik Sumatera Selatan dengan peralatan analitik modern memberi kebanggaan tersendiri. Kami diberi ruang bereksperimen, berdiskusi kritis, dan mencari formulasi terbaik.', icon: 'microscope', color: 'var(--t)' },
+  { name: 'Dinda Aulia, S.Farm.', role: 'Alumni Magang (Kini QC Analyst)', text: 'Waktu magang 3 bulan, saya benar-benar dipercaya memegang instrumen HPLC dan uji disolusi, bukan sekadar tugas fotokopi. Mentornya sangat sabar membimbing.', icon: 'graduation-cap', color: '#3E6B27' },
+  { name: 'Budi Santoso, S.T.', role: 'Production Supervisor', text: 'Budaya kerjanya sangat kompak. Ketika ada kendala pada mesin, tim teknik, produksi, dan QA duduk bersama memecahkan masalah tanpa saling menyalahkan.', icon: 'factory', color: 'var(--b)' },
+  { name: 'apt. Fahmi Ilham, S.Farm.', role: 'Regulatory Affairs', text: 'Tantangan menyusun dossier registrasi ke BPOM memberi wawasan mendalam tentang pemenuhan regulasi dari hulu ke hilir. Tim selalu didukung pelatihan berkala.', icon: 'file-text', color: 'var(--m)' },
+  { name: 'Annisa Rahmawati', role: 'Mahasiswa PKPA', text: 'Melihat langsung penerapan CPOB membuat teori kuliah menjadi hidup. Terima kasih ARTEMA telah membuka pintu bagi calon apoteker untuk belajar langsung di industri!', icon: 'user', color: 'var(--p)' }
+];
+document.getElementById('testimonialsGrid').innerHTML = TESTIMONIALS.map(t => `
+  <div class="card">
+    <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem">
+      <div style="width:48px;height:48px;border-radius:50%;background:${t.color};display:grid;place-items:center;color:#fff;flex-shrink:0">
+        ${icon(t.icon, 22)}
+      </div>
+      <div>
+        <h4 style="font-size:.95rem;margin:0">${t.name}</h4>
+        <small style="color:var(--t);font-weight:600;font-size:12px">${t.role}</small>
+      </div>
+    </div>
+    <p style="font-size:14px;color:var(--tx);line-height:1.65;font-style:italic;margin:0">"${t.text}"</p>
+  </div>
+`).join('');
+
+// ============ RENDER: FAQ ============
+const FAQS = [
+  ['Apakah produk ARTEMA bisa dibeli tanpa resep?','Tergantung golongannya. Obat bebas dan herbal dapat dibeli tanpa resep, sedangkan obat keras wajib dengan resep dokter.'],
+  ['Di mana saya bisa membeli produk ARTEMA?','Melalui apotek dan toko obat mitra distribusi kami.'],
+  ['Bagaimana cara menyimpan obat yang benar?','Simpan di tempat sejuk, kering, terhindar dari sinar matahari, dan jauh dari jangkauan anak.'],
+  ['Bagaimana membuang obat kedaluwarsa?','Jangan dibuang utuh ke tempat sampah. Gunakan kotak obat kedaluwarsa atau ikuti prinsip DAGUSIBU.'],
+  ['Saya mengalami efek tidak nyaman setelah minum obat. Apa yang harus dilakukan?','Hentikan penggunaan bila perlu, konsultasikan ke dokter atau apoteker, lalu laporkan melalui halaman Informasi Medis & MESO.'],
+  ['Apakah ARTEMA menerima mahasiswa magang?','Ya. Lihat syarat dan alurnya di halaman Karir.'],
+  ['Bagaimana menjadi mitra, sponsor, atau donatur beasiswa?','Pilih topik kerja sama di halaman Hubungi Kami.'],
+  ['Apakah informasi di situs ini pengganti saran dokter?','Tidak. Informasi bersifat umum dan tidak menggantikan penilaian tenaga kesehatan.']
+];
+document.getElementById('faqContainer').innerHTML = FAQS.map(f => `
+  <details class="faq">
+    <summary>${f[0]}</summary>
+    <p>${f[1]}</p>
+  </details>
+`).join('');
+
+// ============ RENDER: MESO ============
+document.getElementById('mesoInfo').innerHTML = [
+  ['Apa itu MESO?','Monitoring Efek Samping Obat: pemantauan keamanan obat setelah beredar. Laporan Anda membantu kami dan regulator menjaga mutu serta keamanan.','shield-check'],
+  ['Kapan perlu melapor?','Bila muncul reaksi tak diharapkan seperti ruam, mual berat, pusing, atau gejala lain setelah memakai produk.','alert-circle'],
+  ['Layanan untuk Nakes','Dokter dan apoteker dapat menanyakan data produk, stabilitas, dan interaksi obat kepada tim ilmiah kami.','stethoscope']
+].map(m => `
+  <div class="card">
+    <div class="card-icon">${icon(m[2])}</div>
+    <h4 style="font-size:.95rem;margin:.25rem 0">${m[0]}</h4>
+    <p style="font-size:13px;color:var(--mu);margin:0">${m[1]}</p>
+  </div>
+`).join('');
+
+document.getElementById('mp').innerHTML = PRODUCTS.map(p => `<option>${p.n}</option>`).join('');
+
+// ============ RENDER: PRIVASI ============
+document.getElementById('privacyGrid').innerHTML = [
+  ['Data yang Kami Kumpulkan','Nama, email, dan isi pesan yang Anda kirim melalui formulir.','clipboard-list'],
+  ['Untuk Apa','Menjawab pertanyaan, memproses laporan efek samping, dan menindaklanjuti kerja sama.','target'],
+  ['Keamanan','Data dijaga dan hanya diakses pihak berwenang di perusahaan.','lock'],
+  ['Pembagian Data','Tidak dijual. Laporan keamanan obat dapat diteruskan ke regulator sesuai aturan.','share-2'],
+  ['Hak Anda','Anda dapat meminta akses, koreksi, atau penghapusan data lewat halaman Hubungi Kami.','user-check']
+].map(p => `
+  <div class="card">
+    <div class="card-icon">${icon(p[2])}</div>
+    <h4 style="font-size:.95rem;margin:.25rem 0">${p[0]}</h4>
+    <p style="font-size:13px;color:var(--mu);margin:0">${p[1]}</p>
+  </div>
+`).join('');
+
+// ============ RENDER: SITEMAP ============
+document.getElementById('sitemapGrid').innerHTML = [
+  ['Utama', [['Beranda','beranda'],['Tentang Kami','tentang'],['Filosofi Logo','filosofi-logo'],['Visi, Misi & Nilai','visi-misi'],['Organisasi','organisasi'],['Legalitas','legalitas']]],
+  ['Produk & Riset', [['Produk & Jasa','produk'],['Riset & Produksi','riset'],['Cek Keaslian','asli']]],
+  ['Peduli & Karir', [['ARTEMA Peduli','csr'],['Peluang Karir','karir'],['Program Magang','magang'],['Pengembangan Karyawan','pengembangan-karyawan'],['Kirim Lamaran','kirim-lamaran'],['Apa Kata Mereka','apa-kata-mereka']]],
+  ['Bantuan', [['Lokasi','lokasi'],['Hubungi Kami','kontak'],['FAQ','faq'],['Informasi Medis','medis'],['Privasi','privasi']]]
+].map(s => `
+  <div class="card">
+    <h4 style="font-size:.95rem;margin:0 0 .75rem">${s[0]}</h4>
+    ${s[1].map(l => `<p style="margin:.3rem 0;font-size:14px"><a href="#${l[1]}" style="color:var(--p);text-decoration:none">${l[0]}</a></p>`).join('')}
+  </div>
+`).join('');
+
+// ============ SOCIAL LINKS ============
+document.getElementById('socLinks').innerHTML = [
+  ['Instagram','https://instagram.com/'],
+  ['LinkedIn','https://linkedin.com/'],
+  ['Facebook','https://facebook.com/'],
+  ['YouTube','https://youtube.com/'],
+  ['WhatsApp','https://wa.me/6281200000000']
+].map(s => `<a href="${s[1]}" target="_blank" rel="noopener">${s[0]}</a>`).join(' · ');
+
+// ============ FORMS ============
+function sendF() {
+  const n = document.getElementById('fn').value.trim();
+  const e = document.getElementById('fe').value.trim();
+  const m = document.getElementById('fm').value.trim();
+  if (!n || !e || !m) {
+    document.getElementById('fs').textContent = 'Mohon lengkapi nama, email, dan pesan.';
+    return;
+  }
+  const subj = document.getElementById('ft').value + ' - ' + n;
+  location.href = `mailto:contact@artemapharma.example?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(m + '\n\nDari: ' + n + ' (' + e + ')')}`;
+  document.getElementById('fs').textContent = 'Terima kasih! Aplikasi email akan terbuka (demo).';
+}
+
+function sendM() {
+  const n = document.getElementById('mn').value.trim();
+  const d = document.getElementById('md').value.trim();
+  if (!n || !d) {
+    document.getElementById('mf').textContent = 'Mohon isi nama dan deskripsi efek samping.';
+    return;
+  }
+  const subj = 'Laporan MESO: ' + document.getElementById('mp').value;
+  const body = `Pelapor: ${n} (${document.getElementById('ms').value})\nBatch: ${document.getElementById('mbatch').value}\n\n${d}`;
+  location.href = `mailto:farmakovigilans@artemapharma.example?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`;
+  document.getElementById('mf').textContent = 'Terima kasih. Aplikasi email akan terbuka (demo).';
+}
+
+function sendLamaran() {
+  const n = document.getElementById('lNama').value.trim();
+  const e = document.getElementById('lEmail').value.trim();
+  const h = document.getElementById('lHp').value.trim();
+  const k = document.getElementById('lKampus').value.trim();
+  const j = document.getElementById('lJalur').value;
+  const d = document.getElementById('lDivisi').value;
+  const dr = document.getElementById('lDrive').value.trim();
+  const p = document.getElementById('lPesan').value.trim();
+  if (!n || !e || !h || !k) {
+    document.getElementById('lStatus').style.color = 'var(--m)';
+    document.getElementById('lStatus').textContent = 'Mohon lengkapi Nama, Email, WhatsApp, dan Kampus.';
+    return;
+  }
+  const subj = 'Lamaran ' + j + ' - ' + d + ' - ' + n;
+  const body = `Yth. Tim HC PT. ARTEMA PHARMA,\n\nData lamaran saya:\nNama: ${n}\nEmail: ${e}\nWhatsApp: ${h}\nInstitusi: ${k}\nJalur: ${j}\nDivisi: ${d}\nCV: ${dr}\n\nMotivasi:\n${p}\n\nTerima kasih.`;
+  location.href = `mailto:recruitment@artemapharma.example?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`;
+  document.getElementById('lStatus').style.color = 'var(--t)';
+  document.getElementById('lStatus').textContent = 'Pendaftaran disiapkan! Aplikasi email akan terbuka.';
+}
+
+// ============ CEK KEASLIAN ============
+const CK = {
+  'ART-2601-001': 'ARTEVIA · Kapsul · Batch 2601',
+  'ART-2601-002': 'SIRVANA · Spray · Batch 2601',
+  'ART-2601-003': 'AMERTAVIA · Kapsul · Batch 2601'
+};
+function chk() {
+  const v = document.getElementById('ck').value.trim().toUpperCase();
+  const r = CK[v];
+  const el = document.getElementById('cr');
+  if (r) {
+    el.innerHTML = '<span style="color:#3E6B27">' + icon('check-circle', 16) + ' Kode terdaftar (demo): <b>' + r + '</b></span>';
+  } else {
+    el.innerHTML = '<span style="color:var(--m)">' + icon('alert-circle', 16) + ' Kode tidak ditemukan. Periksa penulisan.</span>';
+  }
+  lucide.createIcons();
+}
+
+// ============ INIT ============
+navigate();
+initReveal();
+lucide.createIcons();
+setTimeout(animateStats, 300);
+</script>
+
+</body>
+</html>
