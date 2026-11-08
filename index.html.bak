@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id" style="color-scheme: light;"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>PT. ARTEMA PHARMA &rdquo;” Modern Botanical Pharmaceutical Corporate</title>
+<title>PT. ARTEMA PHARMA  -  Modern Botanical Pharmaceutical Corporate</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -120,7 +120,7 @@ tailwind.config = {
  <svg class="hero-botanical" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="1.5"><path d="M100 190V60M100 150c-30-5-45-25-50-45 28 2 45 15 50 45zM100 120c30-5 45-25 50-45-28 2-45 15-50 45zM100 90c-20-4-30-18-34-32 20 2 31 11 34 32zM100 70c20-4 30-18 34-32-20 2-31 11-34 32z"/></svg>
  <div class="w"><span class='tag hero-tag'>Nature-Inspired Pharmaceutical Innovation Company</span>
  <h1>Merawat Kehidupan, Menumbuhkan Inovasi.</h1>
- <p><i>&ldquo;Merawat kehidupan melalui ilmu, menumbuhkan harapan melalui inovasi.&rdquo;</i> ARTEMA menghubungkan riset bahan alam, pengembangan produk, pengendalian mutu, edukasi kesehatan, dan pemberdayaan masyarakat.</p>
+ <p><i>"Merawat kehidupan melalui ilmu, menumbuhkan harapan melalui inovasi."</i> ARTEMA menghubungkan riset bahan alam, pengembangan produk, pengendalian mutu, edukasi kesehatan, dan pemberdayaan masyarakat.</p>
  <a class="btn b1" href="#produk">Jelajahi Produk</a><a class="btn b2" href="#tentang">Tentang Kami</a></div>
 </div>
 <div class="w"><div class="g" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:center;gap:32px"><div><h3 style="font-size:1.4rem;color:var(--p);font-weight:700;margin-bottom:12px">Profil PT. ARTEMA PHARMA</h3><h2>Artema adalah dedikasi kami untuk kesehatan, dari alam Nusantara</h2><p>PT. ARTEMA PHARMA hadir dengan komitmen menghadirkan solusi kesehatan yang aman, bermutu, dan terpercaya. Berlandaskan riset bahan alam dan kearifan flora Sumatera Selatan, setiap langkah kami didorong dedikasi untuk meningkatkan kualitas hidup masyarakat. Bagi kami, Artema bukan sekadar nama, melainkan semangat penemuan yang kami wujudkan dalam setiap produk.</p><a class="btn b1" href="#tentang">Baca profil lengkap</a></div><div class="vid" style="padding:0;overflow:hidden"><video class="av" src="asset/video/company-profile.mp4" controls preload="metadata"></video></div></div></div>
@@ -134,7 +134,7 @@ tailwind.config = {
 
 <div style="margin-bottom:20px">
 <div id="distribution-map"></div>
-<p style="text-align:center;margin-top:16px;color:var(--mu);font-size:13.5px">Klik pin untuk melihat detail kota dan wilayah &middot; <span style="color:#EA00D9">&#9679;</span> Kantor pusat &nbsp;<span style="color:#2AAEB6">&#9679;</span> Titik distribusi</p>
+<p style="text-align:center;margin-top:16px;color:var(--mu);font-size:13.5px">Klik pin untuk melihat detail kota dan wilayah &middot; <span style="color:#EA00D9">&#9679;</span> Kantor pusat &nbsp;<span style="color:#2AAEB6">&#9679;</span> Titik distribusi</p>
 </div></div></div>
 <div class="w"><h2>Produk Unggulan</h2><div class="pg-grid" id="feat"></div><a class="btn b1" href="#produk" style="margin-top:20px">Lihat semua 60 produk</a></div>
 <div class="w"><h3 style="font-size:1.4rem;color:var(--p);font-weight:700;margin-bottom:12px">Kegiatan</h3><h2>Sehari di ARTEMA: dari lab sampai ke desa</h2><div class="g" id="act"></div></div>
@@ -201,14 +201,14 @@ tailwind.config = {
  <i data-lucide="map-pin" class="w-7 h-7"></i>
  </div>
  <div>
- <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.8);margin-bottom:4px">ðŸ“ Titik Operasional</div>
+ <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.8);margin-bottom:4px">Titik Operasional</div>
  <h3 style="margin:0;font-size:20px;color:white;font-weight:800">Kantor Pusat &amp; Pabrik</h3>
  </div>
  </div>
  
  <div style="background:rgba(255,255,255,0.12);backdrop-filter:blur(10px);border-radius:14px;padding:20px;margin-bottom:20px;border:1px solid rgba(255,255,255,0.18)">
  <p style="margin:0;color:white;line-height:1.75;font-size:15px">
- <b style="font-size:16px;display:block;margin-bottom:8px;color:#2AAEB6">ðŸ“Œ JL. Trans Sumatera, Km 28</b>
+ <b style="font-size:16px;display:block;margin-bottom:8px;color:#2AAEB6">JL. Trans Sumatera, Km 28</b>
  Desa Palem Raya Indralaya<br>
  Kabupaten Ogan Ilir<br>
  Sumatera Selatan 30862<br>
@@ -265,7 +265,7 @@ tailwind.config = {
  </div>
 </div>
 <div class="w"><span class="tag">Tentang Kami</span><h2>Berawal dari rasa ingin tahu, tumbuh menjadi komitmen untuk kesehatan</h2>
-<div id='story' style='max-width:780px'></div><h2 style='margin-top:28px'>Perjalanan 2018&rdquo;“2026</h2><div class='tl' id='tl'></div></div></section>
+<div id='story' style='max-width:780px'></div><h2 style='margin-top:28px'>Perjalanan 2018-2026</h2><div class='tl' id='tl'></div></div></section>
 
 <section class="pg" id="filosofi-logo">
 <div class="page-hdr">
@@ -299,7 +299,7 @@ tailwind.config = {
  Logo <b>PT. ARTEMA PHARMA</b> dirancang sebagai wujud komitmen etis, keilmuan, dan kultural. Di dalamnya terpadu semangat penemuan obat berbasis bahan alam terstandar, penghormatan kepada dedikasi saintis, serta harapan bahwa setiap formulasi yang kami lahirkan mampu menjadi mata air kesembuhan bagi masyarakat luas.
  </p>
  <div class="note" style="margin-top:20px">
- <b><i data-lucide="lightbulb" class="w-4 h-4 text-pu inline mr-1"></i> Inti Makna:</b> Menggabungkan inisial huruf <b>&ldquo;A&rdquo;</b> yang menjulang dinamis, keteladanan <b>Prof. Tu Youyou</b>, lambang universal farmasi <b>Mangkuk Hygieia</b>, sepasang <b>daun sirih Nusantara</b>, pancaran <b>air Amerta</b>, serta keindahan <b>batik buketan bunga telang</b>.
+ <b><i data-lucide="lightbulb" class="w-4 h-4 text-pu inline mr-1"></i> Inti Makna:</b> Menggabungkan inisial huruf <b>"A"</b> yang menjulang dinamis, keteladanan <b>Prof. Tu Youyou</b>, lambang universal farmasi <b>Mangkuk Hygieia</b>, sepasang <b>daun sirih Nusantara</b>, pancaran <b>air Amerta</b>, serta keindahan <b>batik buketan bunga telang</b>.
  </div>
  
  <!-- Color Palette Swatches -->
@@ -370,9 +370,9 @@ tailwind.config = {
  <img class="aml" src="asset/filosofi/amerta-angka-23.png" alt="Corak air kehidupan Amerta Bumandhala">
  </div>
  <span class="pill">Ciri Khas Angkatan 2023</span>
- <h3 style="margin:8px 0 10px">&ldquo;Amerta Bumandhala&rdquo; (Air Kehidupan)</h3>
+ <h3 style="margin:8px 0 10px">"Amerta Bumandhala" (Air Kehidupan)</h3>
  <p style="font-size:14px;color:var(--tx);line-height:1.65">
- Mengambil esensi dari nama angkatan <b>Amerta Bumandhala</b>, di mana kata <b>&ldquo;Amerta&rdquo;</b> bermakna abadi atau <b>air kehidupan</b> &rdquo;” divisualisasikan melalui corak cairan dinamis yang mengalir indah di dalam labu dan cawan. <b>Angka 23</b> disematkan sebagai representasi identitas angkatan 2023 yang mengalirkan <b>semangat, ketangguhan, dan inovasi</b> tanpa henti, layaknya aliran air kehidupan.
+ Mengambil esensi dari nama angkatan <b>Amerta Bumandhala</b>, di mana kata <b>"Amerta"</b> bermakna abadi atau <b>air kehidupan</b>  -  divisualisasikan melalui corak cairan dinamis yang mengalir indah di dalam labu dan cawan. <b>Angka 23</b> disematkan sebagai representasi identitas angkatan 2023 yang mengalirkan <b>semangat, ketangguhan, dan inovasi</b> tanpa henti, layaknya aliran air kehidupan.
  </p>
  </div>
 
@@ -383,7 +383,7 @@ tailwind.config = {
  <span class="pill">Karakteristik &amp; Realitas Indralaya</span>
  <h3 style="margin:8px 0 10px">Taman Pancasila, Debu &amp; Karhutla</h3>
  <p style="font-size:14px;color:var(--tx);line-height:1.65">
- <b>Taman Pancasila</b> merepresentasikan jantung interaksi sosial, pusat kebersamaan, serta simbol <b>nilai-nilai luhur Pancasila</b> yang hidup di tengah lingkungan civitas a &rdquo;” melambangkan keterbukaan, kerukunan, dan semangat persatuan yang menjadi fondasi kuat menempuh ilmu di <b>bumi Indralaya</b>. <b>Sentuhan debu</b> sehari-hari dan refleksi fenomena <b>karhutla</b> (kebakaran hutan dan lahan) merepresentasikan dinamika serta realitas alam yang melekat pada geografis Indralaya.
+ <b>Taman Pancasila</b> merepresentasikan jantung interaksi sosial, pusat kebersamaan, serta simbol <b>nilai-nilai luhur Pancasila</b> yang hidup di tengah lingkungan civitas a  -  melambangkan keterbukaan, kerukunan, dan semangat persatuan yang menjadi fondasi kuat menempuh ilmu di <b>bumi Indralaya</b>. <b>Sentuhan debu</b> sehari-hari dan refleksi fenomena <b>karhutla</b> (kebakaran hutan dan lahan) merepresentasikan dinamika serta realitas alam yang melekat pada geografis Indralaya.
  </p>
  </div>
 
@@ -436,10 +436,10 @@ tailwind.config = {
 
  <!-- Navigasi Terkait -->
  <div style="margin-top:40px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
- <a class="btn b2" style="color:var(--tx);border-color:var(--ln)" href="#tentang">&larr; Kembali ke Profil Perusahaan</a>
+ <a class="btn b2" style="color:var(--tx);border-color:var(--ln)" href="#tentang">Kembali ke Profil Perusahaan</a>
  <div style="display:flex;flex-wrap:wrap;gap:10px">
- <a class="btn b1" href="#visi-misi">Visi, Misi &amp; Nilai &larr;’</a>
- <a class="btn b1" href="#organisasi">Struktur Organisasi &larr;’</a>
+ <a class="btn b1" href="#visi-misi">Visi, Misi &amp; Nilai</a>
+ <a class="btn b1" href="#organisasi">Struktur Organisasi</a>
  </div>
  </div>
 </div>
@@ -469,7 +469,7 @@ tailwind.config = {
  </div>
  </div>
  <blockquote style="margin:16px 0 0;padding:16px 20px;border-left:4px solid var(--mg);background:var(--card);border-radius:0 14px 14px 0;font-size:18px;font-weight:600;color:var(--tx);line-height:1.6">
- &ldquo;Menjadi perusahaan farmasi yang inovatif, tepercaya, dan bertanggung jawab melalui pengembangan produk kesehatan berbasis ilmu pengetahuan serta eksplorasi potensi alam Indonesia.&rdquo;
+ "Menjadi perusahaan farmasi yang inovatif, tepercaya, dan bertanggung jawab melalui pengembangan produk kesehatan berbasis ilmu pengetahuan serta eksplorasi potensi alam Indonesia."
  </blockquote>
  <p style="margin:14px 0 0;font-size:14px;color:var(--mu)">
  Visi ini menegaskan bahwa setiap formulasi yang dikembangkan ARTEMA berpijak pada metodologi ilmiah yang kokoh, pemanfaatan biodiversitas lokal secara bertanggung jawab, dan orientasi pada kemaslahatan kesehatan masyarakat luas.
@@ -569,7 +569,7 @@ tailwind.config = {
  <div class="c" style="border-top:4px solid var(--tl)">
  <div style="display:flex;justify-content:space-between;align-items:center">
  <b style="color:var(--t);font-size:20px">E &middot; Excellence</b>
- <span style="font-size:24px">&#11088;</span>
+ <span style="font-size:24px">&#11088;</span>
  </div>
  <h3 style="font-size:16px;margin:8px 0 4px">Keunggulan Mutu</h3>
  <p style="font-size:14px;color:var(--mu);margin:0">Berkomitmen pada penyempurnaan tiada henti (continuous quality improvement) melampaui standar minimal yang dipersyaratkan.</p>
@@ -595,10 +595,10 @@ tailwind.config = {
  </div>
 
  <div style="margin-top:40px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
- <a class="btn b2" style="color:var(--tx);border-color:var(--ln)" href="#tentang">&larr; Kembali ke Sejarah Kami</a>
+ <a class="btn b2" style="color:var(--tx);border-color:var(--ln)" href="#tentang">Kembali ke Sejarah Kami</a>
  <div style="display:flex;flex-wrap:wrap;gap:10px">
- <a class="btn b1" href="#filosofi-logo">Lihat Filosofi Logo &larr;’</a>
- <a class="btn b1" href="#organisasi">Struktur Organisasi &larr;’</a>
+ <a class="btn b1" href="#filosofi-logo">Lihat Filosofi Logo</a>
+ <a class="btn b1" href="#organisasi">Struktur Organisasi</a>
  </div>
  </div>
 </div>
@@ -651,8 +651,8 @@ tailwind.config = {
 </div>
 <p style="text-align:center;color:var(--mu);font-size:12.5px;margin-top:22px">Struktur kepemimpinan di atas 12 departemen fungsional &middot; Jabatan bersifat simulasi</p>
 <div style="margin-top:36px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center">
- <a class="btn b2" style="color:var(--tx);border-color:var(--ln)" href="#visi-misi">&larr; Kembali ke Visi Misi</a>
- <a class="btn b1" href="#legalitas">Lihat Legalitas Perusahaan &larr;’</a>
+ <a class="btn b2" style="color:var(--tx);border-color:var(--ln)" href="#visi-misi">Kembali ke Visi Misi</a>
+ <a class="btn b1" href="#legalitas">Lihat Legalitas Perusahaan</a>
 </div>
 </div></section>
 
@@ -797,17 +797,17 @@ tailwind.config = {
  PT. ARTEMA PHARMA tunduk pada regulasi <b>Peraturan Badan Pengawas Obat dan Makanan (BPOM)</b> terkait Penerapan Farmakovigilans. Tim independen Farmakovigilans kami secara aktif memantau, mendokumentasikan, dan menindaklanjuti setiap laporan Monitoring Efek Samping Obat (MESO) demi memastikan rasio manfaat-risiko produk tetap terjaga optimal bagi seluruh pasien.
  </p>
  <div style="margin-top:16px">
- <a class="btn b1" href="#medis">Akses Layanan Pelaporan MESO &larr;’</a>
+ <a class="btn b1" href="#medis">Akses Layanan Pelaporan MESO</a>
  <a class="btn b2" style="color:var(--p);border-color:var(--p)" href="#asli">Periksa Keaslian Batch Produk</a>
  </div>
  </div>
 
  <!-- Navigasi Terkait -->
  <div style="margin-top:40px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
- <a class="btn b2" style="color:var(--tx);border-color:var(--ln)" href="#organisasi">&larr; Kembali ke Struktur Organisasi</a>
+ <a class="btn b2" style="color:var(--tx);border-color:var(--ln)" href="#organisasi">Kembali ke Struktur Organisasi</a>
  <div style="display:flex;flex-wrap:wrap;gap:10px">
- <a class="btn b1" href="#produk">Jelajahi 60 Produk &larr;’</a>
- <a class="btn b1" href="#kontak">Hubungi Tim Regulasi &larr;’</a>
+ <a class="btn b1" href="#produk">Jelajahi 60 Produk</a>
+ <a class="btn b1" href="#kontak">Hubungi Tim Regulasi</a>
  </div>
  </div>
 </div>
@@ -845,7 +845,7 @@ tailwind.config = {
 </div>
 <div class="w"><span class="tag">Riset &amp; Produksi</span><h2>Dari rasa ingin tahu menuju proses yang terukur</h2>
 <p class='note'>Diagram proses produksi sediaan padat nonsteril. Alur aktual berbeda menurut jenis sediaan dan fasilitas, serta harus mengikuti prosedur dan persyaratan yang berlaku.</p><div class="flow" id="flow"></div>
-<h2 style="margin-top:40px">Standar mutu yang kami tuju</h2><div class="g" id="cert"></div><h2 style="margin-top:40px">Video</h2><div class="g"><div><div class="vid" style="padding:0;overflow:hidden"><video class="av" src="asset/video/company-profile.mp4" controls preload="metadata"></video></div><small style="color:var(--mu);display:block;margin-top:6px;text-align:center">&#9654; Company Profile &amp; Alur Produksi (6&rdquo;“8 menit) &middot; <b>asset/video/company-profile.mp4</b></small></div><div><div class="vid" style="padding:0;overflow:hidden"><video class="av" src="asset/video/iklan-produk-1.mp4" controls preload="metadata"></video></div><small style="color:var(--mu);display:block;margin-top:6px;text-align:center">&#9654; Iklan Produk 1 (&le;30 dtk) &middot; <b>asset/video/iklan-produk-1.mp4</b></small></div><div><div class="vid" style="padding:0;overflow:hidden"><video class="av" src="asset/video/iklan-produk-2.mp4" controls preload="metadata"></video></div><small style="color:var(--mu);display:block;margin-top:6px;text-align:center">&#9654; Iklan Produk 2 (&le;30 dtk) &middot; <b>asset/video/iklan-produk-2.mp4</b></small></div></div></div></section>
+<h2 style="margin-top:40px">Standar mutu yang kami tuju</h2><div class="g" id="cert"></div><h2 style="margin-top:40px">Video</h2><div style="max-width:680px"><div><div class="vid" style="padding:0;overflow:hidden"><video class="av" src="asset/video/company-profile.mp4" controls preload="metadata"></video></div><small style="color:var(--mu);display:block;margin-top:6px;text-align:center">&#9654; Company Profile &amp; Alur Produksi (6-8 menit) &middot; <b>asset/video/company-profile.mp4</b></small></div></div></div></section>
 
 <section class="pg" id="csr">
 <div class="page-hdr">
@@ -890,7 +890,7 @@ tailwind.config = {
 </div>
 <div class="w"><span class="tag">Lokasi</span><h2>Denah &amp; Kontak</h2><div class="g" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
 <div><div class="map"><div><i data-lucide="map-pin" class="w-5 h-5 inline mr-1"></i> Peta interaktif (sematkan Google Maps)<br><a class="btn b1" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Universitas+Sriwijaya+Indralaya">Buka Petunjuk Arah</a></div></div></div>
-<div class="c"><h3>Kontak</h3><p><i data-lucide="map-pin" class="w-4 h-4 text-pu inline mr-1"></i> Indralaya, Sumatera Selatan<br><i data-lucide="mail" class="w-4 h-4 text-pu inline mr-1"></i> contact@artemapharma.example<br><i data-lucide="clock" class="w-4 h-4 text-pu inline mr-1"></i> Senin&rdquo;“Jumat, 08.00&rdquo;“16.00</p><div class="map" style="aspect-ratio:16/7;background:var(--lav)"><img class="aml" src="asset/lokasi/denah-fasilitas.jpeg" alt="Denah fasilitas" loading="lazy"></div></div></div></div></section>
+<div class="c"><h3>Kontak</h3><p><i data-lucide="map-pin" class="w-4 h-4 text-pu inline mr-1"></i> Indralaya, Sumatera Selatan<br><i data-lucide="mail" class="w-4 h-4 text-pu inline mr-1"></i> contact@artemapharma.example<br><i data-lucide="clock" class="w-4 h-4 text-pu inline mr-1"></i> Senin-Jumat, 08.00-16.00</p><div class="map" style="aspect-ratio:16/7;background:var(--lav)"><img class="aml" src="asset/lokasi/denah-fasilitas.jpeg" alt="Denah fasilitas" loading="lazy"></div></div></div></div></section>
 
 <section class="pg" id="karir">
 <div class="page-hdr">
@@ -906,7 +906,7 @@ tailwind.config = {
 </div>
 <div class="w"><span class="tag">Karir &amp; Magang</span><h2>Tempat rasa ingin tahu bertemu kesempatan untuk bertumbuh.</h2><p style='max-width:760px'>Inovasi tumbuh ketika orang diberi ruang untuk belajar, bertanya, dan bekerja bersama. ARTEMA merancang lingkungan kerja yang mengutamakan kolaborasi, integritas, dan pengembangan kompetensi. Bidang yang dapat dijelajahi: riset dan pengembangan, QA/QC, produksi, regulatory affairs, pengadaan dan distribusi, komunikasi kesehatan, serta teknologi informasi. Posisi dan jadwal dicantumkan sesuai ketersediaan.</p><div class="g" id="bidang"></div>
 <h2 style="margin-top:40px">Alur seleksi, tanpa drama</h2><div class="flow" id="rek"></div><p class='note' style='margin-top:12px'>Rancangan proses rekrutmen.</p>
-<div class="alt" style="border-radius:20px;padding:24px;margin-top:36px"><h2>Magang ARTEMA: belajar di lab sungguhan</h2><div class="g" id="mag"></div><div style="margin-top:16px"><a class="btn b1" href="#magang">Pelajari Detail Program Magang &larr;’</a></div></div>
+<div class="alt" style="border-radius:20px;padding:24px;margin-top:36px"><h2>Magang ARTEMA: belajar di lab sungguhan</h2><div class="g" id="mag"></div><div style="margin-top:16px"><a class="btn b1" href="#magang">Pelajari Detail Program Magang</a></div></div>
 <h2 style="margin-top:40px">Hidup di ARTEMA: serius bekerja, akrab bergaul</h2><div class="g" id="staf"></div>
 <div style="margin-top:36px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
  <a class="btn b1" href="#magang"><i data-lucide="graduation-cap" class="w-4 h-4 mr-1"></i> Program Magang</a>
@@ -939,7 +939,7 @@ tailwind.config = {
  Program Magang di <b>PT. ARTEMA PHARMA</b> dirancang khusus untuk menjembatani teori kampus dengan dinamika industri farmasi nyata. Peserta magang dibimbing langsung oleh <b>Apoteker dan Peneliti Senior</b> dalam menjalankan uji laboratorium, penanganan instrumen analitik, hingga pemahaman komprehensif terhadap regulasi CPOB Badan POM.
  </p>
  <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px">
- <a class="btn b1" href="#kirim-lamaran">Daftar Magang Sekarang &larr;’</a>
+ <a class="btn b1" href="#kirim-lamaran">Daftar Magang Sekarang</a>
  <a class="btn b2" style="color:var(--p);border-color:var(--p)" href="#apa-kata-mereka">Baca Pengalaman Alumni</a>
  </div>
  </div>
@@ -959,24 +959,24 @@ tailwind.config = {
  <div class="dot" style="margin:40px 0"></div>
  <span class="tag">Galeri Kegiatan</span>
  <h2>Kegiatan Magang &amp; PKPA</h2>
- <p style="color:var(--mu);max-width:760px;margin-bottom:24px">Dokumentasi kegiatan magang dan praktik industri di ARTEMA PHARMA. Foto akan segera ditambahkan.</p>
+ <p style="color:var(--mu);max-width:760px;margin-bottom:24px">Dokumentasi kegiatan magang dan praktik industri di ARTEMA PHARMA.</p>
  <div class="g" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:20px">
  <div class="c" style="background:var(--lav);border:1px solid var(--ln);border-radius:16px;overflow:hidden;display:flex;flex-direction:column">
- <div class="ph" style="aspect-ratio:1;background:var(--lav)"></div>
+ <div class="ph" style="aspect-ratio:1;background:var(--lav)"><img class="aml" src="asset/magang/Orientasi Laboratorium.jpeg" alt="Orientasi Laboratorium" loading="lazy"></div>
  <div style="padding:16px;display:flex;flex-direction:column;flex:1">
  <h3 style="margin:0 0 8px;font-size:16px">Orientasi Laboratorium</h3>
  <p style="font-size:13px;color:var(--mu);margin:0">Perkenalan fasilitas riset dan instrumen analitik bagi peserta magang baru.</p>
  </div>
  </div>
  <div class="c" style="background:var(--lav);border:1px solid var(--ln);border-radius:16px;overflow:hidden;display:flex;flex-direction:column">
- <div class="ph" style="aspect-ratio:1;background:var(--lav)"></div>
+ <div class="ph" style="aspect-ratio:1;background:var(--lav)"><img class="aml" src="asset/magang/Praktik QC &amp; QA.jpeg" alt="Praktik QC &amp; QA" loading="lazy"></div>
  <div style="padding:16px;display:flex;flex-direction:column;flex:1">
  <h3 style="margin:0 0 8px;font-size:16px">Praktik QC &amp; QA</h3>
  <p style="font-size:13px;color:var(--mu);margin:0">Pelatihan uji kadar, mikrobiologi, dan pengendalian mutu produksi farmasi.</p>
  </div>
  </div>
  <div class="c" style="background:var(--lav);border:1px solid var(--ln);border-radius:16px;overflow:hidden;display:flex;flex-direction:column">
- <div class="ph" style="aspect-ratio:1;background:var(--lav)"></div>
+ <div class="ph" style="aspect-ratio:1;background:var(--lav)"><img class="aml" src="asset/magang/Formulasi Fitofarmaka.jpeg" alt="Formulasi Fitofarmaka" loading="lazy"></div>
  <div style="padding:16px;display:flex;flex-direction:column;flex:1">
  <h3 style="margin:0 0 8px;font-size:16px">Formulasi Fitofarmaka</h3>
  <p style="font-size:13px;color:var(--mu);margin:0">Praktik ekstraksi bahan alam dan pengembangan sediaan fitofarmaka baru.</p>
@@ -1040,18 +1040,18 @@ tailwind.config = {
  <div class="c" style="background:var(--card)">
  <h3 style="margin-top:0"><i data-lucide="calendar" class="w-5 h-5 text-pu inline mr-1.5"></i> Periode Pendaftaran:</h3>
  <p style="font-size:14px;color:var(--mu)">Pendaftaran dibuka dalam 2 siklus setiap tahun:</p>
- <p style="font-size:14px;margin:8px 0"><b>&bull; Batch 1 (Semester Ganjil):</b> Pendaftaran dibuka Mei&rdquo;“Juni, pelaksanaan Juli&rdquo;“September.</p>
- <p style="font-size:14px;margin:8px 0"><b>&bull; Batch 2 (Semester Genap):</b> Pendaftaran dibuka November&rdquo;“Desember, pelaksanaan Januari&rdquo;“Maret.</p>
+ <p style="font-size:14px;margin:8px 0"><b>&bull; Batch 1 (Semester Ganjil):</b> Pendaftaran dibuka Mei-Juni, pelaksanaan Juli-September.</p>
+ <p style="font-size:14px;margin:8px 0"><b>&bull; Batch 2 (Semester Genap):</b> Pendaftaran dibuka November-Desember, pelaksanaan Januari-Maret.</p>
  <p style="font-size:13px;color:var(--p);font-weight:700;margin-top:14px"><i>*Untuk Program PKPA Fakultas Farmasi mitra, jadwal dapat diselaraskan sesuai kalender kampus.</i></p>
  </div>
  </div>
  </div>
 
  <div style="margin-top:40px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
- <a class="btn b2" style="color:var(--tx);border-color:var(--ln)" href="#karir">&larr; Kembali ke Peluang Karir</a>
+ <a class="btn b2" style="color:var(--tx);border-color:var(--ln)" href="#karir">Kembali ke Peluang Karir</a>
  <div style="display:flex;flex-wrap:wrap;gap:10px">
- <a class="btn b1" href="#kirim-lamaran">Isi Formulir Magang &larr;’</a>
- <a class="btn b1" href="#pengembangan-karyawan">Pengembangan Karyawan &larr;’</a>
+ <a class="btn b1" href="#kirim-lamaran">Isi Formulir Magang</a>
+ <a class="btn b1" href="#pengembangan-karyawan">Pengembangan Karyawan</a>
  </div>
  </div>
 </div>
@@ -1143,10 +1143,10 @@ tailwind.config = {
  </div>
 
  <div style="margin-top:40px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
- <a class="btn b2" style="color:var(--tx);border-color:var(--ln)" href="#magang">&larr; Kembali ke Program Magang</a>
+ <a class="btn b2" style="color:var(--tx);border-color:var(--ln)" href="#magang">Kembali ke Program Magang</a>
  <div style="display:flex;flex-wrap:wrap;gap:10px">
- <a class="btn b1" href="#apa-kata-mereka">Apa Kata Mereka &larr;’</a>
- <a class="btn b1" href="#kirim-lamaran">Kirim Lamaran Kerja &larr;’</a>
+ <a class="btn b1" href="#apa-kata-mereka">Apa Kata Mereka</a>
+ <a class="btn b1" href="#kirim-lamaran">Kirim Lamaran Kerja</a>
  </div>
  </div>
 </div>
@@ -1232,7 +1232,7 @@ tailwind.config = {
  <textarea id="lPesan" rows="3" placeholder="Ceritakan motivasi dan ketertarikan Anda bergabung di ARTEMA..."></textarea>
  </div>
 
- <button class="btn b1" onclick="sendLamaran()" style="margin-top:10px;width:100%">Kirim Berkas Lamaran &larr;’</button>
+ <button class="btn b1" onclick="sendLamaran()" style="margin-top:10px;width:100%">Kirim Berkas Lamaran</button>
  <p id="lStatus" style="font-size:13px;font-weight:700;margin-top:8px"></p>
  </div>
  </div>
@@ -1270,7 +1270,7 @@ tailwind.config = {
  <p style="font-size:14px;color:var(--tx);margin:8px 0">
  <i data-lucide="mail" class="w-4 h-4 text-pu inline mr-1"></i> Email: <a href="mailto:recruitment@artemapharma.example">recruitment@artemapharma.example</a><br>
  <i data-lucide="phone" class="w-4 h-4 text-pu inline mr-1"></i> Telepon: (0711) 000-000 (Ext. 204 HR)<br>
- <i data-lucide="clock" class="w-4 h-4 text-pu inline mr-1"></i> Jam Kerja: Senin&rdquo;“Jumat, 08.00&rdquo;“16.00 WIB
+ <i data-lucide="clock" class="w-4 h-4 text-pu inline mr-1"></i> Jam Kerja: Senin-Jumat, 08.00-16.00 WIB
  </p>
  <p class="note" style="margin-bottom:0"><i data-lucide="alert-triangle" class="w-4 h-4 text-amber-500 inline mr-1"></i> PT. ARTEMA PHARMA tidak memungut biaya apa pun dalam seluruh proses rekrutmen dan seleksi magang.</p>
  </div>
@@ -1279,10 +1279,10 @@ tailwind.config = {
  </div>
 
  <div style="margin-top:40px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
- <a class="btn b2" style="color:var(--tx);border-color:var(--ln)" href="#pengembangan-karyawan">&larr; Kembali ke Pengembangan Karyawan</a>
+ <a class="btn b2" style="color:var(--tx);border-color:var(--ln)" href="#pengembangan-karyawan">Kembali ke Pengembangan Karyawan</a>
  <div style="display:flex;flex-wrap:wrap;gap:10px">
- <a class="btn b1" href="#apa-kata-mereka">Baca Apa Kata Mereka &larr;’</a>
- <a class="btn b1" href="#karir">Peluang Karir Terbuka &larr;’</a>
+ <a class="btn b1" href="#apa-kata-mereka">Baca Apa Kata Mereka</a>
+ <a class="btn b1" href="#karir">Peluang Karir Terbuka</a>
  </div>
  </div>
 </div>
@@ -1324,7 +1324,7 @@ tailwind.config = {
  </div>
  </div>
  <p style="font-size:14px;color:var(--tx);line-height:1.65;font-style:italic">
- &ldquo;Di ARTEMA, integritas mutu bukan sekadar slogan di dinding, melainkan keputusan nyata setiap hari. Ketika kami meninjau batch record sediaan kapsul atau sirup, kami tahu bahwa di ujung proses ada keselamatan pasien yang kami pertanggungjawabkan.&rdquo;
+ "Di ARTEMA, integritas mutu bukan sekadar slogan di dinding, melainkan keputusan nyata setiap hari. Ketika kami meninjau batch record sediaan kapsul atau sirup, kami tahu bahwa di ujung proses ada keselamatan pasien yang kami pertanggungjawabkan."
  </p>
  </div>
 
@@ -1337,7 +1337,7 @@ tailwind.config = {
  </div>
  </div>
  <p style="font-size:14px;color:var(--tx);line-height:1.65;font-style:italic">
- &ldquo;Mengeksplorasi tanaman endemik Sumatera Selatan seperti daun sirih dan telang dengan peralatan analitik modern memberi kebanggaan tersendiri. Kami diberi ruang bereksperimen, berdiskusi kritis, dan mencari formulasi terbaik.&rdquo;
+ "Mengeksplorasi tanaman endemik Sumatera Selatan seperti daun sirih dan telang dengan peralatan analitik modern memberi kebanggaan tersendiri. Kami diberi ruang bereksperimen, berdiskusi kritis, dan mencari formulasi terbaik."
  </p>
  </div>
 
@@ -1350,7 +1350,7 @@ tailwind.config = {
  </div>
  </div>
  <p style="font-size:14px;color:var(--tx);line-height:1.65;font-style:italic">
- &ldquo;Waktu magang 3 bulan di sini, saya benar-benar dipercaya memegang instrumen HPLC dan uji disolusi, bukan sekadar tugas fotokopi. Mentornya sangat sabar membimbing, dan sekarang saya bangga bisa bergabung sebagai karyawan tetap!&rdquo;
+ "Waktu magang 3 bulan di sini, saya benar-benar dipercaya memegang instrumen HPLC dan uji disolusi, bukan sekadar tugas fotokopi. Mentornya sangat sabar membimbing, dan sekarang saya bangga bisa bergabung sebagai karyawan tetap!"
  </p>
  </div>
 
@@ -1363,7 +1363,7 @@ tailwind.config = {
  </div>
  </div>
  <p style="font-size:14px;color:var(--tx);line-height:1.65;font-style:italic">
- &ldquo;Budaya kerjanya sangat kompak. Ketika ada kendala pada mesin pencetak tablet atau jalur pendingin HVAC, tim teknik, produksi, dan QA duduk bersama memecahkan masalah tanpa ada budaya saling menyalahkan.&rdquo;
+ "Budaya kerjanya sangat kompak. Ketika ada kendala pada mesin pencetak tablet atau jalur pendingin HVAC, tim teknik, produksi, dan QA duduk bersama memecahkan masalah tanpa ada budaya saling menyalahkan."
  </p>
  </div>
 
@@ -1376,7 +1376,7 @@ tailwind.config = {
  </div>
  </div>
  <p style="font-size:14px;color:var(--tx);line-height:1.65;font-style:italic">
- &ldquo;Tantangan menyusun dossier registrasi 60 produk ke Badan POM memberi wawasan mendalam tentang pemenuhan regulasi dari hulu ke hilir. Tim selalu didukung pelatihan sertifikasi berkala.&rdquo;
+ "Tantangan menyusun dossier registrasi 60 produk ke Badan POM memberi wawasan mendalam tentang pemenuhan regulasi dari hulu ke hilir. Tim selalu didukung pelatihan sertifikasi berkala."
  </p>
  </div>
 
@@ -1389,17 +1389,17 @@ tailwind.config = {
  </div>
  </div>
  <p style="font-size:14px;color:var(--tx);line-height:1.65;font-style:italic">
- &ldquo;Melihat langsung penerapan prinsip CPOB membuat teori-teori kuliah di kampus menjadi hidup. Terima kasih ARTEMA telah membuka pintu bagi calon apoteker untuk belajar langsung di industri!&rdquo;
+ "Melihat langsung penerapan prinsip CPOB membuat teori-teori kuliah di kampus menjadi hidup. Terima kasih ARTEMA telah membuka pintu bagi calon apoteker untuk belajar langsung di industri!"
  </p>
  </div>
 
  </div>
 
  <div style="margin-top:40px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
- <a class="btn b2" style="color:var(--tx);border-color:var(--ln)" href="#kirim-lamaran">&larr; Formulir Lamaran Kerja</a>
+ <a class="btn b2" style="color:var(--tx);border-color:var(--ln)" href="#kirim-lamaran">Formulir Lamaran Kerja</a>
  <div style="display:flex;flex-wrap:wrap;gap:10px">
- <a class="btn b1" href="#magang">Daftar Program Magang &larr;’</a>
- <a class="btn b1" href="#karir">Kembali ke Menu Karir &larr;’</a>
+ <a class="btn b1" href="#magang">Daftar Program Magang</a>
+ <a class="btn b1" href="#karir">Kembali ke Menu Karir</a>
  </div>
  </div>
 </div>
@@ -1418,7 +1418,7 @@ tailwind.config = {
  </div>
 </div>
 <div class="w"><span class="tag">Hubungi Kami</span><h2>Senang mendengar cerita dan gagasan Anda.</h2><p>Pilih topik yang paling sesuai agar pesan Anda diarahkan ke bagian yang tepat.</p><div class="g" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))"><div class="c"><h3>Kirim pesan</h3><div class="fm"><input id="fn" placeholder="Nama lengkap"><input id="fe" type="email" placeholder="Email"><select id="ft"><option>Informasi produk</option><option>Kerja sama distribusi</option><option>Kolaborasi riset dan </option><option>Program sosial dan lingkungan</option><option>Karier dan magang</option><option>Informasi keamanan obat</option><option>Pertanyaan umum</option></select><textarea id="fm" rows="4" placeholder="Tulis pesan Anda&hellip;"></textarea><button class="btn b1" onclick="sendF()">Kirim pesan</button><small>Atau isi Google Form: <a href="#kontak">Klik di sini</a></small><p id="fs" style="color:var(--p)"></p></div></div>
-<div class="c"><h3>Kontak langsung</h3><p><i data-lucide="phone" class="w-4 h-4 text-pu inline mr-1"></i> (0711) 000-000<br><i data-lucide="mail" class="w-4 h-4 text-pu inline mr-1"></i> contact@artemapharma.example<br><i data-lucide="map-pin" class="w-4 h-4 text-pu inline mr-1"></i> Indralaya, Sumatera Selatan<br><i data-lucide="clock" class="w-4 h-4 text-pu inline mr-1"></i> Senin&rdquo;“Jumat, 08.00&rdquo;“16.00</p><a class="btn b1" target="_blank" rel="noopener" href="https://wa.me/6281200000000"><i data-lucide="message-circle" class="w-4 h-4 mr-1"></i> Chat WhatsApp Bisnis</a></div></div>
+<div class="c"><h3>Kontak langsung</h3><p><i data-lucide="phone" class="w-4 h-4 text-pu inline mr-1"></i> (0711) 000-000<br><i data-lucide="mail" class="w-4 h-4 text-pu inline mr-1"></i> contact@artemapharma.example<br><i data-lucide="map-pin" class="w-4 h-4 text-pu inline mr-1"></i> Indralaya, Sumatera Selatan<br><i data-lucide="clock" class="w-4 h-4 text-pu inline mr-1"></i> Senin-Jumat, 08.00-16.00</p><a class="btn b1" target="_blank" rel="noopener" href="https://wa.me/6281200000000"><i data-lucide="message-circle" class="w-4 h-4 mr-1"></i> Chat WhatsApp Bisnis</a></div></div>
 <h2 style="margin-top:40px">Mari berkolaborasi</h2><div class="g" id="coop"></div>
 <div class="c" style="margin-top:20px"><h3><i data-lucide="graduation-cap" class="w-5 h-5 text-pu inline mr-1.5"></i> ARTEMA Scholar</h3><p>Beasiswa dari ARTEMA untuk mahasiswa farmasi berprestasi. Awardee mendapat jalur prioritas magang dan rekrutmen. Mitra yang ingin menjadi donatur dapat bergabung, atau kami ikut mendukung beasiswa kampus mitra.</p></div></div></section>
 
@@ -1517,7 +1517,7 @@ tailwind.config = {
  <p style="margin-bottom:6px"><b style="color:#fff;font-size:12.5px;display:inline">HR &amp; Rekrutmen:</b><br><a href="mailto:recruitment@artemapharma.example">recruitment@artemapharma.example</a></p>
  <p style="margin-bottom:6px"><b style="color:#fff;font-size:12.5px;display:inline">Telepon:</b> (0711) 000-000<br><b style="color:#fff;font-size:12.5px;display:inline">WhatsApp Bisnis:</b> +62 812-0000-0000</p>
  <p style="margin-bottom:14px"><b style="color:#fff;font-size:12.5px;display:inline">Alamat:</b> Indralaya, Ogan Ilir, Sumatera Selatan</p>
- <a class="btn b1" style="margin-top:6px;padding:8px 18px;font-size:13px" href="#kontak">Hubungi Kami &larr;’</a>
+ <a class="btn b1" style="margin-top:6px;padding:8px 18px;font-size:13px" href="#kontak">Hubungi Kami</a>
  </div>
  </div>
 
