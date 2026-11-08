@@ -26,10 +26,11 @@ function getIcon(name, cls="w-5 h-5") {
 }
 
 const cats=["Herbal & Fitofarmaka","Vitamin & Suplemen","Nyeri & Demam","Saluran Cerna","Pernapasan","Kulit & Topikal"];
-const forms=["Kapsul","Tablet","Sirup","Salep/Krim","Tetes Mata","Sachet","Larutan Kumur","Balsem","Oral Drops","Hand Sanitizer","Shampo","Kosmetik","Infus","Intranasal Spray"];const gol=["Herbal Terstandar &amp; Fitofarmaka","Obat Bebas &amp; Bebas Terbatas","Obat Keras (Resep)","Suplemen &amp; Perawatan"];
+const forms=["Kapsul","Tablet","Sirup","Salep/Krim","Tetes Mata","Sachet","Larutan Kumur","Balsem","Oral Drops","Hand Sanitizer","Shampo","Kosmetik","Infus","Intranasal Spray","Tablet Hisap"];const gol=["Herbal Terstandar &amp; Fitofarmaka","Obat Bebas &amp; Bebas Terbatas","Obat Keras (Resep)","Suplemen &amp; Perawatan"];
 const cc=["#7C13A4","#2AAEB6","#0B4784","#EA00D9","#0B0A4E","#7C13A4"];
-const raw="ARTEVIA:0,SIRVANA:6,NETRABIRU:4,AMERTAVIA:0,CENTELIA:0,JAHENDRA:5,HEPARUNA:0,KURKUFLEX:1,NIRAGARD:2,ANDRAGO:0,CIRAVITA:1,SOLARIS D3:0,ZINCARA:1,ENERVIA B:1,OMEGAVELA:0,KIDORA:2,OSTEVA:1,FERROLA:1,TOKOVERA:0,IONARA:5,PARANOVA 500:1,PROFENIA 200:1,BUPRIKID:2,REDARA GEL:3,OLIGA:7,SUHURA:8,MEFENIA 500:1,MIGRELA:1,HANGARA BALM:7,BACORA:0,LAMBUNGIA:2,FLORABIO:5,BEHINDRA:5,GALANGA:0,DIMENVIA:1,LANCARA:1,TENANGA DROPS:8,SILIMARA:0,GASLEGA:1,ADASARI:2,SIRILEGA:2,TUSFRIA:2,PILEXA:1,NASALEGA:13,EKSPEKTRA:2,NAFASIA:0,FLUNOCTA:1,IODARA:3,LUKARA:3,GATARA:3,MIKORA:3,SURYAVEIL:11,TELANGLOW:11,KLARISA:3,AMERTA DEW:11,ZIPIRA:10,TANGARA CLEAN:9,GUAVINE:9,ASCORBIA:12";
-const P=raw.split(",").map((s,i)=>{const[n,f]=s.split(":");return{n,f:+f,c:Math.floor(i/10),i,g:+"000000000033333333331111112210131011101001111121011112332313"[i]}});
+const raw="ARTEVIA:0,SIRVANA:6,NETRABIRU:4,AMERTAVIA:0,CENTELIA:0,JAHENDRA:5,HEPARUNA:0,KURKUFLEX:1,NIRAGARD:2,ANDRAGO:0,CIRAVITA:1,SOLARIS D3:0,ZINCARA:1,ENERVIA B:1,OMEGAVELA:0,KIDORA:2,OSTEVA:1,FERROLA:1,TOKOVERA:0,IONARA:5,PARANOVA 500:1,PROFENIA 200:1,BUPRIKID:2,REDARA GEL:3,OLIGA:7,SUHURA:8,MEFENIA 500:1,MIGRELA:1,HANGARA BALM:7,BACORA:0,LAMBUNGIA:2,FLORABIO:5,BEHINDRA:5,GALANGA:0,DIMENVIA:1,LANCARA:1,TENANGA DROPS:8,SILIMARA:0,GASLEGA:1,ADASARI:2,SIRILEGA:2,TUSFRIA:2,PILEXA:1,NASALEGA:13,EKSPEKTRA:2,NAFASIA:0,FLUNOCTA:1,IODARA:3,LUKARA:3,GATARA:3,MIKORA:3,SURYAVEIL:11,TELANGLOW:11,KLARISA:3,AMERTA DEW:11,ZIPIRA:10,TANGARA CLEAN:9,GUAVINE:9,ASCORBIA:12,TENGGARA:14:4:1";
+const groupCodes="001000000033333333331111112210131011101001111011112331333323";
+const P=raw.split(",").map((s,i)=>{const[n,f,c,g]=s.split(":");return{n,f:+f,c:c===undefined?Math.floor(i/10):+c,i,g:g===undefined?+groupCodes[i]:+g}});
 const prodDetails={
 "ARTEVIA":{comp:"Ekstrak Artemisia annua 200 mg",ind:"Membantu memelihara daya tahan tubuh",dose:"1 kapsul 2x sehari",bpom:"DTL2324001234"},
 "SIRVANA":{comp:"Ekstrak daun sirih 100 mg",ind:"Obat kumur herbal untuk kesehatan mulut",dose:"Kumur 15 ml, 2-3x sehari",bpom:"DBL2324001235"},
@@ -88,9 +89,10 @@ const prodDetails={
 "KLARISA":{comp:"Salicylic acid 2%, Tea tree oil 1%",ind:"Membantu mengatasi jerawat",dose:"Oleskan pada area jerawat 2x sehari",bpom:"DBL2324001290"},
 "AMERTA DEW":{comp:"Hyaluronic acid, Aloe vera extract",ind:"Melembapkan dan menutrisi kulit",dose:"Oleskan pada wajah dan leher 2x sehari",bpom:"DBL2324001291"},
 "ZIPIRA":{comp:"Zinc pyrithione 1%, Ketoconazole 1%",ind:"Mengatasi ketombe dan gatal pada kulit kepala",dose:"Gunakan 2-3x seminggu, diamkan 3-5 menit lalu bilas",bpom:"DBL2324001292"},
-"TANGARA CLEAN":{comp:"Alcohol 70%, Aloe vera extract",ind:"Antiseptik pembersih tangan",dose:"Tuang secukupnya, gosok hingga kering",bpom:"DBL2324001293"},
+"TANGARA CLEAN":{comp:"Etanol 70% v/v; Gliserin 1,45%; Hidrogen peroksida 0,125%",ind:"Membantu membersihkan tangan bila air dan sabun tidak tersedia",dose:"Semprot ke telapak tangan dan gosok sampai kering",bpom:"DBL2324001293"},
 "GUAVINE":{comp:"Alcohol 70%, Ekstrak jambu biji, Glycerin",ind:"Hand sanitizer gel dengan ekstrak jambu biji untuk kesehatan tangan",dose:"Tuang secukupnya pada telapak tangan, gosok hingga merata dan kering",bpom:"DBL2324001294"},
-"ASCORBIA":{comp:"Vitamin C (Asam askorbat) 1000 mg dalam 10 ml",ind:"Suplemen vitamin C intravena untuk pasien yang memerlukan dosis tinggi",dose:"Sesuai petunjuk dokter, diberikan secara intravena",bpom:"DKL2324001295"}
+"TENGGARA":{subtitle:"Tenggorok Soothe",classification:"Obat Bebas Terbatas (OBT)",comp:"Amilmetakresol 0,6 mg; 2,4-Diklorobenzil alkohol 1,2 mg (tablet hisap)",ind:"Antiseptik tenggorokan; meredakan nyeri dan radang tenggorokan ringan",dose:"Hisap 1 tablet tiap 2-3 jam, maksimal 8 tablet per hari",bpom:"[Data sedang dilengkapi]"},
+"ASCORBIA":{comp:"Setiap 1 mL mengandung Natrium Askorbat 40 mg (4% b/v). Setiap 500 mL mengandung Natrium Askorbat 20.000 mg (20 gram).",ind:"Sediaan vitamin C untuk pemberian intravena pada pasien dengan kebutuhan suplementasi vitamin C melalui jalur parenteral sesuai pertimbangan dan indikasi medis.",dose:"Dosis dan kecepatan pemberian ditentukan oleh dokter berdasarkan kondisi serta kebutuhan pasien. Diberikan melalui infus intravena oleh tenaga kesehatan profesional.",bpom:"DKL2324001295"}
 };
 function img(p){
   const folders=[
@@ -107,13 +109,14 @@ function img(p){
     "shampo",           // 10
     "kosmetik",         // 11
     "infus",            // 12
-    "intranasal"        // 13
+    "intranasal",       // 13
+    "tablet"            // 14
   ];
   const folder=folders[p.f]||"produk";
   const u=`${folder}/${p.n}.png`;
   return medIMG(u,p.n);
 }
-function card(p){return `<div class="pc" onclick="openP(${p.i})"><div class="im">${img(p)}</div><div class="t"><b>${p.n}</b><small>${cats[p.c]}</small><br><span class="pill">${forms[p.f]}</span> <span class="pill">${gol[p.g]}</span></div></div>`}
+function card(p){const d=prodDetails[p.n];return `<div class="pc" onclick="openP(${p.i})"><div class="im">${img(p)}</div><div class="t"><b>${p.n}</b><small>${cats[p.c]}</small>${d&&d.subtitle?`<small>${d.subtitle}</small>`:""}<br><span class="pill">${forms[p.f]}</span> <span class="pill">${gol[p.g]}</span></div></div>`}
 function render(){const q=$("#q").value.toLowerCase(),c=$("#fc").value,f=$("#ff").value,g=$("#fg").value;
 const r=P.filter(p=>p.n.toLowerCase().includes(q)&&(c==="*"||p.c==c)&&(f==="*"||p.f==f)&&(g==="*"||p.g==g));
 $("#grid").innerHTML=r.map(card).join("")||"<p>Produk tidak ditemukan.</p>";$("#cnt").textContent=`Menampilkan ${r.length} dari 60 produk`}
@@ -121,7 +124,7 @@ function openP(i){
   try{
     const p=P[i];
     const d=prodDetails[p.n]||{comp:"[Data sedang dilengkapi]",ind:"[Data sedang dilengkapi]",dose:"[Data sedang dilengkapi]",bpom:"[Data sedang dilengkapi]"};
-    $("#mb").innerHTML=`<div class="mbi">${img(p)}</div><div><button class="x" onclick="closeP()" aria-label="Tutup"><i data-lucide="x" class="w-5 h-5"></i></button><h3 style="font-size:1.3rem;margin-bottom:8px">${p.n}</h3><span class="pill">${cats[p.c]}</span> <span class="pill">${forms[p.f]}</span> <span class="pill">${gol[p.g]}</span><div style="margin-top:20px;font-size:13.5px"><p style="margin:10px 0"><b><i data-lucide="pill" class="w-4 h-4 text-pu inline-block mr-1"></i> Komposisi:</b><br><span style="color:var(--tx)">${d.comp}</span></p><p style="margin:10px 0"><b><i data-lucide="target" class="w-4 h-4 text-pu inline-block mr-1"></i> Indikasi:</b><br><span style="color:var(--tx)">${d.ind}</span></p><p style="margin:10px 0"><b><i data-lucide="clipboard-list" class="w-4 h-4 text-pu inline-block mr-1"></i> Dosis &amp; Aturan Pakai:</b><br><span style="color:var(--tx)">${d.dose}</span></p><p style="margin:10px 0"><b><i data-lucide="check-circle-2" class="w-4 h-4 text-tl inline-block mr-1"></i> No. Registrasi BPOM:</b><br><span style="color:var(--tx)">${d.bpom}</span></p></div></div>`;
+    $("#mb").innerHTML=`<div class="mbi">${img(p)}</div><div><button class="x" onclick="closeP()" aria-label="Tutup"><i data-lucide="x" class="w-5 h-5"></i></button><h3 style="font-size:1.3rem;margin-bottom:8px">${p.n}</h3>${d.subtitle?`<p>${d.subtitle}</p>`:""}<span class="pill">${cats[p.c]}</span> <span class="pill">${forms[p.f]}</span> <span class="pill">${gol[p.g]}</span>${d.classification?` <span class="pill">${d.classification}</span>`:""}<div style="margin-top:20px;font-size:13.5px"><p style="margin:10px 0"><b><i data-lucide="pill" class="w-4 h-4 text-pu inline-block mr-1"></i> Komposisi:</b><br><span style="color:var(--tx)">${d.comp}</span></p><p style="margin:10px 0"><b><i data-lucide="target" class="w-4 h-4 text-pu inline-block mr-1"></i> Indikasi:</b><br><span style="color:var(--tx)">${d.ind}</span></p><p style="margin:10px 0"><b><i data-lucide="clipboard-list" class="w-4 h-4 text-pu inline-block mr-1"></i> Dosis &amp; Aturan Pakai:</b><br><span style="color:var(--tx)">${d.dose}</span></p><p style="margin:10px 0"><b><i data-lucide="check-circle-2" class="w-4 h-4 text-tl inline-block mr-1"></i> No. Registrasi BPOM:</b><br><span style="color:var(--tx)">${d.bpom}</span></p></div></div>`;
     $("#mo").classList.add("on");
     if(window.lucide) lucide.createIcons();
   }catch(err){
@@ -257,5 +260,3 @@ addEventListener('hashchange', () => {
   setTimeout(initScrollAnimations, 100);
 });
 initScrollAnimations();
-
-
